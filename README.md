@@ -11,7 +11,7 @@
     - [x] ~~Behaviour~~
     - [ ] Styling <span>**🌞**</span>
     - [ ] Menu
-- [ ] Finish loading animation
+- [x] ~~Finish loading animation~~
 - [ ] Fix header slider animation <span style="color:#ff213b">**✦**</span>
 
 #### Other things
