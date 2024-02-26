@@ -1,6 +1,27 @@
-# Getting Started with Create React App
+# Areal Alien - Portfolio
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+### Worklist:
+
+#### Most important
+
+- [x] ~~Start project~~ <span>✨</span>
+- [ ] Change CSS code to be unanimous <span style="color:#ff213b">**✦**</span>
+- [ ] Fix naming schemes <span style="color:#ff213b">**✦**</span>
+- [ ] Finish Navbar
+    - [x] ~~Behaviour~~
+    - [ ] Styling <span>**🌞**</span>
+    - [ ] Menu
+- [ ] Finish loading animation
+- [ ] Fix header slider animation <span style="color:#ff213b">**✦**</span>
+
+#### Other things
+
+- [ ] Finish layout <span style="color:#ff213b">**✦**</span>
+  - [ ] Projects Section <span style="color:#ff4d61">**✦**</span>
+  - [ ] Showreel Section
+  - [ ] About Section
+  - [ ] Contact Section <span style="color:#ff4d61">**✦**</span>
+- [ ] Add Footer
 
 ## Available Scripts
 
@@ -39,32 +60,6 @@ Instead, it will copy all the configuration files and the transitive dependencie
 
 You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
 
-## Learn More
+### `npm run css:build`
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Runs the build sequence for the CSS file, and generates all the necessary files.
