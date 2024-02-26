@@ -9,14 +9,3 @@
 @import "components/banner";
 @import "components/marquee";
 @import "components/loader";
-
-.grain {
-  top: 0; left: 0; right: 0; bottom: 0;
-  position: fixed;
-  background-position: 50% 50%;
-  background-size: auto;
-  pointer-events: none;
-  user-select: none;
-  opacity: .02;
-  z-index: 1000;
-}
