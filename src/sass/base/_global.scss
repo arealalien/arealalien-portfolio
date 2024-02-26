@@ -1,0 +1,8 @@
+body {
+  background: hslac($background, 1);
+  overflow-x: hidden;
+}
+::selection {
+  color: hslac($white, 1);
+  background: hslac($primary, 1);
+}
