@@ -5,14 +5,14 @@
 #### Most important
 
 - [x] ~~Start project~~ <span>✨</span>
-- [ ] Change CSS code to be unanimous <span style="color:#ff213b">**✦**</span>
-- [ ] Fix naming schemes <span style="color:#ff213b">**✦**</span>
+- [x] ~~Change CSS code to be unanimous~~ <span style="color:#ff213b">**✦**</span>
+- [x] ~~Fix naming schemes~~ <span style="color:#ff213b">**✦**</span>
 - [ ] Finish Navbar
-    - [x] ~~Behaviour~~
+    - [ ] Behaviour
     - [ ] Styling <span>**🌞**</span>
     - [ ] Menu
 - [x] ~~Finish loading animation~~
-- [ ] Fix header slider animation <span style="color:#ff213b">**✦**</span>
+- [x] ~~Fix header slider animation~~ <span style="color:#ff213b">**✦**</span>
 
 #### Other things
 
@@ -21,6 +21,7 @@
   - [ ] Showreel Section
   - [ ] About Section
   - [ ] Contact Section <span style="color:#ff4d61">**✦**</span>
+- [ ] Fix header on each page with separate picture on each 
 - [ ] Add Footer
 
 ## Available Scripts
