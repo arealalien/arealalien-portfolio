@@ -31,18 +31,18 @@ const Navbar = () => {
             </svg>
           </div>
         </div>
-        <div className='navbar-inner-right'>
-            <p className='navbar-inner-right-title'>Home</p>
-            <div className='navbar-inner-right-line'></div>
-            <div className='navbar-inner-right-burger'>
-                <div className='navbar-inner-right-burger-line'></div>
-                <div className='navbar-inner-right-burger-line'></div>
-                <div className='navbar-inner-right-burger-line'></div>
-            </div>
-        </div>
+          <div className='navbar-inner-right'>
+              <p className='navbar-inner-right-title'>Home</p>
+              <div className='navbar-inner-right-line'></div>
+              <div className='navbar-inner-right-burger'>
+                  <div className='navbar-inner-right-burger-line'></div>
+                  <div className='navbar-inner-right-burger-line'></div>
+                  <div className='navbar-inner-right-burger-line'></div>
+              </div>
+          </div>
       </nav>
     </motion.div>
-  );
+    );
 };
 
 export default Navbar;
