@@ -1,7 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 
-const Header = () => {
+const Navbar = () => {
   return (
     <motion.div
       initial={{ opacity: 0, y: -180 }}
@@ -11,13 +11,13 @@ const Header = () => {
         duration: 1,
         delay: 0.6,
       }}
-      className='header'>
-      <nav className='header-inner'>
-        <div className='header-inner-left'>
-          <button className='header-inner-left-button'>My reel</button>
+      className='navbar'>
+      <nav className='navbar-inner'>
+        <div className='navbar-inner-left'>
+          <button className='navbar-inner-left-button'>My reel</button>
         </div>
-        <div className='header-inner-center'>
-          <div className='header-inner-center-logo'>
+        <div className='navbar-inner-center'>
+          <div className='navbar-inner-center-logo'>
             <svg xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 1438.88 1819.54">
               <title>icon-white</title>
               <polygon className="cls-1"
@@ -30,13 +30,18 @@ const Header = () => {
             </svg>
           </div>
         </div>
-        <div className='header-inner-right'>
-            <p className='header-inner-right-title'>Home</p>
-            <div className='header-inner-right-line'></div>
+        <div className='navbar-inner-right'>
+            <p className='navbar-inner-right-title'>Home</p>
+            <div className='navbar-inner-right-line'></div>
+            <div className='navbar-inner-right-burger'>
+                <div className='navbar-inner-right-burger-line'></div>
+                <div className='navbar-inner-right-burger-line'></div>
+                <div className='navbar-inner-right-burger-line'></div>
+            </div>
         </div>
       </nav>
     </motion.div>
   );
 };
 
-export default Header;
+export default Navbar;

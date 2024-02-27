@@ -4,7 +4,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import './css/main.css';
 
 // Components
-import Header from "./components/Header";
+import Navbar from "./components/Navbar";
 import Banner from "./components/Banner";
 import Loader from "./components/Loader";
 
@@ -27,7 +27,7 @@ function App() {
                     </motion.div>
                 ) : (
                     <>
-                        <Header />
+                        <Navbar />
                         <header>
                             <Banner />
                             {!loading && (
