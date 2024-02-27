@@ -6,6 +6,7 @@ import './css/main.css';
 // Components
 import Navbar from "./components/Navbar";
 import Banner from "./components/Banner";
+import Services from "./components/Services";
 import Loader from "./components/Loader";
 
 function App() {
@@ -40,6 +41,7 @@ function App() {
                                 </div>
                             )}
                         </header>
+                        <Services />
                     </>
                 )}
             </AnimatePresence>

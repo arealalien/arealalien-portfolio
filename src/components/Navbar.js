@@ -1,8 +1,9 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 
 const Navbar = () => {
-  return (
+
+    return (
     <motion.div
       initial={{ opacity: 0, y: -180 }}
       animate={{ opacity: 1, y: 0 }}
