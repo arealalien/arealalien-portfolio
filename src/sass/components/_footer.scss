@@ -2,12 +2,34 @@
   min-height: 50vh;
   background-color: hslac($background-dark, 1);
   &-top {
+    @include flex-center();
+
     &-list {
+      width: 50%;
       display: grid;
       grid-template-columns: repeat(2, 1fr);
       &-item {
-        &-link {
-
+        padding: 2em;
+        width: 100%;
+        position: relative;
+        border-bottom: 1px solid hslac($white, .1);
+        cursor: pointer;
+        &-text {
+          width: 100%;
+          color: hslac($white, 1);
+          text-align: center;
+        }
+        &-bar {
+          top: auto; left: 0; bottom: -1px; right: 0;
+          height: 1px;
+          position: absolute;
+          overflow: hidden;
+          &-fill {
+            width: 100%; height: 100%;
+            background-color: hslac($white, 1);
+            transform: translate3d(-101%, 0px, 0px);
+            transition: transform .75s cubic-bezier($transition-main, 1);
+          }
         }
       }
     }
