@@ -6,8 +6,9 @@ import './css/main.css';
 // Components
 import Navbar from "./components/Navbar";
 import Banner from "./components/Banner";
-import Services from "./components/Services";
 import Loader from "./components/Loader";
+import Services from "./components/Services";
+import Footer from "./components/Footer";
 
 function App() {
     const [loading, setLoading] = useState(true);
@@ -42,6 +43,7 @@ function App() {
                             )}
                         </header>
                         <Services />
+                        <Footer />
                     </>
                 )}
             </AnimatePresence>

@@ -1,0 +1,15 @@
+.footer {
+  min-height: 50vh;
+  background-color: hslac($background-dark, 1);
+  &-top {
+    &-list {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      &-item {
+        &-link {
+
+        }
+      }
+    }
+  }
+}
