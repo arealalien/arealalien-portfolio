@@ -7,7 +7,10 @@ import './css/main.css';
 import Navbar from "./components/Navbar";
 import Banner from "./components/Banner";
 import Loader from "./components/Loader";
-import Services from "./components/Services";
+import Projects from "./components/Projects";
+import Gallery from "./components/Gallery";
+import About from "./components/About";
+import Contact from "./components/Contact";
 import Footer from "./components/Footer";
 
 function App() {
@@ -42,7 +45,10 @@ function App() {
                                 </div>
                             )}
                         </header>
-                        <Services />
+                        <Projects />
+                        <Gallery />
+                        <About />
+                        <Contact />
                         <Footer />
                     </>
                 )}
