@@ -19,7 +19,7 @@
         grid-template-columns: 1fr;
       }
       &-item {
-        padding: 3em;
+        padding: 2.75em;
         width: 100%;
         position: relative;
         border-bottom: 1px solid hslac($white, .1);
@@ -27,6 +27,7 @@
         &-text {
           width: 100%;
           color: hslac($white, 1);
+          font-size: $paragraph;
           font-family: $font-secondary;
           font-weight: 300;
           text-transform: uppercase;
