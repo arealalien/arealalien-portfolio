@@ -1,15 +1,25 @@
 .footer {
-  min-height: 50vh;
+  padding: 10em 0 0 0;
   background-color: hslac($background-dark, 1);
-  &-top {
-    @include flex-center();
+  gap: 15em;
+  @include flex-col();
 
+  &-top {
+    display: grid;
+    grid-template-columns: minmax(5vw, 1fr) minmax(auto, 760px) minmax(5vw, 1fr);
+    place-items: center;
     &-list {
-      width: 50%;
+      width: 100%;
       display: grid;
       grid-template-columns: repeat(2, 1fr);
+      column-gap: 4em;
+      grid-column-end: 3; grid-column-start: 2;
+      grid-row-end: 2; grid-row-start: 1;
+      @media (max-width: $layout-breakpoint-small) {
+        grid-template-columns: 1fr;
+      }
       &-item {
-        padding: 2em;
+        padding: 3em;
         width: 100%;
         position: relative;
         border-bottom: 1px solid hslac($white, .1);
@@ -17,6 +27,10 @@
         &-text {
           width: 100%;
           color: hslac($white, 1);
+          font-family: $font-secondary;
+          font-weight: 300;
+          text-transform: uppercase;
+          letter-spacing: .15em;
           text-align: center;
         }
         &-bar {
@@ -30,6 +44,41 @@
             transform: translate3d(-101%, 0px, 0px);
             transition: transform .75s cubic-bezier($transition-main, 1);
           }
+        }
+      }
+    }
+  }
+  &-bottom {
+    width: 100%;
+    @include flex-center();
+    &-inner {
+      padding: 4em 0;
+      border-top: 1px solid hslac($white, .1);
+      @include flex-space-bet();
+
+      &-left {
+        gap: 2em;
+        @include flex-left();
+
+        p, span {
+          color: hslac($grooble, 1);
+          font-size: calc($paragraph - .2rem);
+          font-family: $font-secondary;
+          text-transform: uppercase;
+          letter-spacing: .3em;
+        }
+      }
+      &-right {
+        gap: 2em;
+        @include flex-right();
+
+        p {
+          color: hslac($grooble, 1);
+          font-size: calc($paragraph - .2rem);
+          font-family: $font-secondary;
+          text-transform: uppercase;
+          letter-spacing: .3em;
+          cursor: pointer;
         }
       }
     }

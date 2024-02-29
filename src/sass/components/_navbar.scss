@@ -10,8 +10,7 @@
   color: hslac($white, 1);
   z-index: 999;
   &-inner {
-    width: calc(100% - 4em); height: 5em;
-    max-width: 1400px;
+    height: 5em;
     display: grid !important;
     grid-template-columns: 25% 1fr 25%;
     border: 1px solid hslac($white, .1);
@@ -93,24 +92,6 @@
       }
     }
   }
-}
-
-.lottie-animation {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  width: 32px;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  -webkit-box-align: center;
-  -webkit-align-items: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-filter: none;
-  filter: none;
 }
 
 header {

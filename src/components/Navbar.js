@@ -13,7 +13,7 @@ const Navbar = () => {
         delay: 0.6,
       }}
       className='navbar'>
-      <nav className='navbar-inner'>
+      <nav className='navbar-inner view-width'>
         <div className='navbar-inner-left'>
           <button className='navbar-inner-left-button'>My reel</button>
         </div>

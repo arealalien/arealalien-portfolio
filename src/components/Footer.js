@@ -78,7 +78,17 @@ const Footer = () => {
                     </li>
                 </ul>
             </div>
-            <div className='footer-bottom'></div>
+            <div className='footer-bottom'>
+                <div className='footer-bottom-inner view-width'>
+                    <div className='footer-bottom-inner-left'>
+                        <p>&copy; <span className='year'>2024</span> Areal Alien</p>
+                    </div>
+                    <div className='footer-bottom-inner-right'>
+                        <p>Terms & Conditions</p>
+                        <p>Privacy Policy</p>
+                    </div>
+                </div>
+            </div>
         </footer>
     );
 };
