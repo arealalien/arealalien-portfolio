@@ -2,12 +2,17 @@
   padding: 15em 0 0 0;
   background-color: hslac($background-dark, 1);
   gap: 10em;
-  @include flex-col();
+  @include flex-col-left();
 
   &-top {
-    display: grid;
-    grid-template-columns: minmax($view-width-padding, 1fr) minmax(auto, 760px) minmax($view-width-padding, 1fr);
-    place-items: center;
+    width: calc(100vw - calc($view-width-padding / 2));
+    @include flex-center();
+
+    &-inner {
+      display: grid;
+      grid-template-columns: minmax(calc($view-width-padding / 2), 1fr) minmax(auto, 760px) minmax(calc($view-width-padding / 2), 1fr);
+      place-items: center;
+    }
     &-list {
       width: 100%;
       display: grid;
@@ -80,7 +85,7 @@
     }
   }
   &-bottom {
-    width: 100%;
+    width: calc(100vw - calc($view-width-padding / 2));
     @include flex-center();
     &-inner {
       padding: 4em 0;

@@ -8,7 +8,6 @@ const About = () => {
                     <h2 className='component-grid-title'>/About</h2>
                 </div>
                 <div className='component-grid-right'>
-                    <h2 className='component-grid-title'>/About</h2>
                 </div>
             </div>
         </section>

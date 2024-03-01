@@ -8,7 +8,6 @@ const Contact = () => {
                     <h2 className='component-grid-title'>/Contact</h2>
                 </div>
                 <div className='component-grid-right'>
-                    <h2 className='component-grid-title'>/Contact</h2>
                 </div>
             </div>
         </section>

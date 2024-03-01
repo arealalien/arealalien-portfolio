@@ -1,6 +1,6 @@
 .navbar {
   top: 0;
-  width: 100vw;
+  width: calc(100vw - calc($view-width-padding / 2));
   font-size: 1.8rem;
   height: 8em;
   display: flex;

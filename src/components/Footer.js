@@ -39,44 +39,46 @@ const Footer = () => {
     return (
         <footer className='footer'>
             <div className='footer-top'>
-                <ul className='footer-top-list'>
-                    <li className='footer-top-list-item'>
-                        <p className='footer-top-list-item-text'>Home</p>
-                        <div className='footer-top-list-item-bar'>
-                            <div className='footer-top-list-item-bar-fill'></div>
-                        </div>
-                    </li>
-                    <li className='footer-top-list-item'>
-                        <p className='footer-top-list-item-text'>Projects</p>
-                        <div className='footer-top-list-item-bar'>
-                            <div className='footer-top-list-item-bar-fill'></div>
-                        </div>
-                    </li>
-                    <li className='footer-top-list-item'>
-                        <p className='footer-top-list-item-text'>Gallery</p>
-                        <div className='footer-top-list-item-bar'>
-                            <div className='footer-top-list-item-bar-fill'></div>
-                        </div>
-                    </li>
-                    <li className='footer-top-list-item'>
-                        <p className='footer-top-list-item-text'>CV</p>
-                        <div className='footer-top-list-item-bar'>
-                            <div className='footer-top-list-item-bar-fill'></div>
-                        </div>
-                    </li>
-                    <li className='footer-top-list-item'>
-                        <p className='footer-top-list-item-text'>About</p>
-                        <div className='footer-top-list-item-bar'>
-                            <div className='footer-top-list-item-bar-fill'></div>
-                        </div>
-                    </li>
-                    <li className='footer-top-list-item'>
-                        <p className='footer-top-list-item-text'>Contact</p>
-                        <div className='footer-top-list-item-bar'>
-                            <div className='footer-top-list-item-bar-fill'></div>
-                        </div>
-                    </li>
-                </ul>
+                <div className='footer-top-inner'>
+                    <ul className='footer-top-list'>
+                        <li className='footer-top-list-item'>
+                            <p className='footer-top-list-item-text'>Home</p>
+                            <div className='footer-top-list-item-bar'>
+                                <div className='footer-top-list-item-bar-fill'></div>
+                            </div>
+                        </li>
+                        <li className='footer-top-list-item'>
+                            <p className='footer-top-list-item-text'>Projects</p>
+                            <div className='footer-top-list-item-bar'>
+                                <div className='footer-top-list-item-bar-fill'></div>
+                            </div>
+                        </li>
+                        <li className='footer-top-list-item'>
+                            <p className='footer-top-list-item-text'>Gallery</p>
+                            <div className='footer-top-list-item-bar'>
+                                <div className='footer-top-list-item-bar-fill'></div>
+                            </div>
+                        </li>
+                        <li className='footer-top-list-item'>
+                            <p className='footer-top-list-item-text'>CV</p>
+                            <div className='footer-top-list-item-bar'>
+                                <div className='footer-top-list-item-bar-fill'></div>
+                            </div>
+                        </li>
+                        <li className='footer-top-list-item'>
+                            <p className='footer-top-list-item-text'>About</p>
+                            <div className='footer-top-list-item-bar'>
+                                <div className='footer-top-list-item-bar-fill'></div>
+                            </div>
+                        </li>
+                        <li className='footer-top-list-item'>
+                            <p className='footer-top-list-item-text'>Contact</p>
+                            <div className='footer-top-list-item-bar'>
+                                <div className='footer-top-list-item-bar-fill'></div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
             </div>
             <div className='footer-center'>
                 <div className='footer-center-social-icon'>
@@ -110,7 +112,7 @@ const Footer = () => {
                 </div>
             </div>
             <div className='footer-bottom'>
-            <div className='footer-bottom-inner view-width'>
+                <div className='footer-bottom-inner view-width'>
                     <div className='footer-bottom-inner-left'>
                         <p>&copy; <span className='year'>2024</span> Areal Alien</p>
                     </div>

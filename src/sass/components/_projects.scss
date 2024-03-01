@@ -1,5 +1,48 @@
 .projects {
-  width: 100%;
+  padding: 15em 0;
+  width: calc(100vw - calc($view-width-padding / 2));
   min-height: 50em;
   @include flex-col();
+  &-inner {
+    &-grid {
+      display: grid;
+      row-gap: 15em;
+      &-item {
+        display: grid;
+        gap: 8em;
+        @media (max-width: $layout-breakpoint-small) {
+          grid-template-columns: 1fr !important;
+        }
+
+        &-image {
+          width: 100%; height: 1fr;
+          position: relative;
+          overflow: hidden;
+          @include flex-center();
+
+          &::after {
+            content: "";
+            display: block;
+            padding-bottom: 70%;
+          }
+          img {
+            min-width: 100%; max-width: 110%;
+            min-height: 100%;
+            position: absolute;
+            object-fit: cover;
+          }
+        }
+        &-info {
+          width: 100%;
+          font-family: $font-secondary;
+        }
+      }
+      .pigif {
+        grid-template-columns: 60% 1fr;
+      }
+      .pigil {
+        grid-template-columns: 1fr 60%;
+      }
+    }
+  }
 }
