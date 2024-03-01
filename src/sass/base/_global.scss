@@ -22,7 +22,7 @@ body {
   position: relative;
   display: grid;
   gap: 4em;
-  grid-template-columns: 1fr 70%;
+  grid-template-columns: 1fr 75%;
   @media (max-width: $layout-breakpoint-small) {
     grid-template-columns: 1fr;
   }
@@ -39,7 +39,7 @@ body {
     font-size: $paragraph;
     font-family: $font-secondary;
     font-weight: 300;
-    letter-spacing: .2em;
+    letter-spacing: .4em;
     text-transform: uppercase;
   }
 }
