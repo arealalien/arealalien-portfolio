@@ -1,7 +1,7 @@
 .footer {
   padding: 15em 0 0 0;
   background-color: hslac($background-dark, 1);
-  gap: 15em;
+  gap: 10em;
   @include flex-col();
 
   &-top {
@@ -55,7 +55,7 @@
     @include flex-center();
 
     &-social-icon {
-      $svg-width: 2em;
+      $svg-width: 2.2em;
       width: calc(4em + $svg-width); height: calc(4em + $svg-width);
       border: 1px solid hslac($white, .1);
       border-radius: 50%;
@@ -68,6 +68,14 @@
       }
       svg {
         width: $svg-width;
+      }
+      #instagram, #github, #twitter {
+        fill: hslac($white, 1);
+      }
+      #linkedin {
+        fill: none;
+        stroke: hslac($white, 1);
+        stroke-width: 1px;
       }
     }
   }

@@ -1,3 +1,9 @@
 .contact {
+  width: 100%;
   min-height: 50em;
+  @include flex-col();
+
+  &-inner {
+
+  }
 }

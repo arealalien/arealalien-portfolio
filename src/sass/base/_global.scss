@@ -1,4 +1,6 @@
 body {
+  width: 100vw; height: 100vh;
+  color: hslac($white, 1);
   background: hslac($background, 1);
   overflow-x: hidden;
 }
@@ -15,6 +17,37 @@ body {
   user-select: none;
   opacity: .015;
   z-index: 1000;
+}
+.component-grid {
+  position: relative;
+  display: grid;
+  grid-auto-columns: 1fr;
+  grid-column-gap: 24px;
+  grid-row-gap: 24px;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: auto;
+  z-index: 25;
+  &-left {
+    grid-auto-columns: 1fr;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto;
+    align-self: stretch;
+    @include flex-space-bet-start-col();
+  }
+  &-right {
+    grid-column-start: 2;
+    grid-column-end: 5;
+    grid-row-end: 2;
+    grid-row-start: 1;
+  }
+  &-title {
+    color: hslac($white, 1);
+    font-size: $paragraph;
+    font-family: $font-secondary;
+    font-weight: 300;
+    letter-spacing: .1em;
+    text-transform: uppercase;
+  }
 }
 ::selection {
   color: hslac($white, 1);
