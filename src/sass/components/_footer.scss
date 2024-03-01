@@ -6,7 +6,7 @@
 
   &-top {
     display: grid;
-    grid-template-columns: minmax(5vw, 1fr) minmax(auto, 760px) minmax(5vw, 1fr);
+    grid-template-columns: minmax($view-width-padding, 1fr) minmax(auto, 760px) minmax($view-width-padding, 1fr);
     place-items: center;
     &-list {
       width: 100%;
@@ -46,6 +46,28 @@
             transition: transform .75s cubic-bezier($transition-main, 1);
           }
         }
+      }
+    }
+  }
+  &-center {
+    width: 100%;
+    gap: 2em;
+    @include flex-center();
+
+    &-social-icon {
+      $svg-width: 2em;
+      width: calc(4em + $svg-width); height: calc(4em + $svg-width);
+      border: 1px solid hslac($white, .1);
+      border-radius: 50%;
+      transition: all .35s cubic-bezier($transition-main, 1);
+      cursor: pointer;
+      @include flex-center();
+
+      &:hover {
+        border: 1px solid hslac($white, 1);
+      }
+      svg {
+        width: $svg-width;
       }
     }
   }

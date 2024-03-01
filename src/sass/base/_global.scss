@@ -3,7 +3,7 @@ body {
   overflow-x: hidden;
 }
 .view-width {
-  width: calc(100% - 4em);
+  width: calc(100% - $view-width-padding);
   max-width: 1400px;
 }
 .grain {
