@@ -1,7 +1,23 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 
 const Navbar = () => {
+    const [scrollPosition, setScrollPosition] = useState(0);
+
+    useEffect(() => {
+        const handleScroll = () => {
+            const position = window.scrollY;
+            setScrollPosition(position);
+        };
+
+        window.addEventListener("scroll", handleScroll);
+        return () => {
+            window.removeEventListener("scroll", handleScroll);
+        };
+    }, []);
+
+    const navbarBackgroundColor = `hsla(216, 19%, 11%, ${scrollPosition / 600})`;
+
 
     return (
     <motion.div
@@ -13,7 +29,7 @@ const Navbar = () => {
         delay: 0.6,
       }}
       className='navbar'>
-      <nav className='navbar-inner view-width'>
+      <nav className='navbar-inner view-width' style={{ backgroundColor: navbarBackgroundColor }}>
         <div className='navbar-inner-left'>
           <button className='navbar-inner-left-button'>My reel</button>
         </div>

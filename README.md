@@ -8,8 +8,8 @@
 - [x] ~~Change CSS code to be unanimous~~ <span style="color:#ff213b">**✦**</span>
 - [x] ~~Fix naming schemes~~ <span style="color:#ff213b">**✦**</span>
 - [ ] Finish Navbar
-    - [ ] Behaviour
-    - [ ] Styling <span>**🌞**</span>
+    - [x] ~~Behaviour~~
+    - [x] ~~Styling~~ <span>**🌞**</span>
     - [ ] Menu
 - [x] ~~Finish loading animation~~
 - [x] ~~Fix header slider animation~~ <span style="color:#ff213b">**✦**</span>
@@ -22,7 +22,8 @@
   - [ ] About Section
   - [ ] Contact Section <span style="color:#ff4d61">**✦**</span>
 - [ ] Fix header on each page with separate picture on each 
-- [ ] Add Footer
+- [x] ~~Add Footer~~
+  - [ ] Finish Footer
 
 ## Available Scripts
 

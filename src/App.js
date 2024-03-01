@@ -45,9 +45,9 @@ function App() {
                                 </div>
                             )}
                         </header>
+                        <About />
                         <Projects />
                         <Gallery />
-                        <About />
                         <Contact />
                         <Footer />
                     </>

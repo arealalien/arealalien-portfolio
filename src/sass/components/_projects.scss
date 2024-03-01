@@ -9,8 +9,9 @@
       row-gap: 15em;
       &-item {
         display: grid;
-        gap: 8em;
+        gap: 6em;
         @media (max-width: $layout-breakpoint-small) {
+          gap: 4em;
           grid-template-columns: 1fr !important;
         }
 
@@ -19,6 +20,9 @@
           position: relative;
           overflow: hidden;
           @include flex-center();
+          @media (max-width: $layout-breakpoint-small) {
+            grid-row: 1;
+          }
 
           &::after {
             content: "";
@@ -35,6 +39,42 @@
         &-info {
           width: 100%;
           font-family: $font-secondary;
+          @include flex-space-bet-start-col();
+          @media (max-width: $layout-breakpoint-small) {
+            grid-row: 2;
+          }
+
+          &-tag {
+            font-size: $paragraph;
+            font-weight: 300;
+            letter-spacing: .2em;
+            text-transform: uppercase;
+            @media (max-width: $layout-breakpoint-small) {
+              padding: 0 0 .8em 0;
+            }
+          }
+          &-bottom {
+            gap: 4em;
+            @include flex-col-left();
+
+            &-title {
+              font-size: $heading-small;
+              font-weight: 500;
+              line-height: 1.3;
+            }
+            &-button {
+              padding: 0 0 1em 0;
+              color: hslac($white, 1);
+              font-family: $font-secondary;
+              font-size: $paragraph;
+              font-weight: 300;
+              background-color: transparent;
+              border: none;
+              border-bottom: 1px solid hslac($white, .1);
+              letter-spacing: .4em;
+              text-transform: uppercase;
+            }
+          }
         }
       }
       .pigif {
