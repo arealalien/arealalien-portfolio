@@ -68,7 +68,7 @@ body {
   font-size: clamp(1rem, 0.978rem + 0.11vw, 1.11rem);
   font-family: "Montserrat", sans-serif;
   font-weight: 300;
-  letter-spacing: 0.1em;
+  letter-spacing: 0.2em;
   text-transform: uppercase;
 }
 

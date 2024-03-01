@@ -5,10 +5,10 @@ const Contact = () => {
         <section className='contact'>
             <div className='contact-inner component-grid view-width'>
                 <div className='component-grid-left'>
-                    <h2 className='component-grid-title'>Contact</h2>
+                    <h2 className='component-grid-title'>/Contact</h2>
                 </div>
                 <div className='component-grid-right'>
-                    <h2 className='component-grid-title'>Contact</h2>
+                    <h2 className='component-grid-title'>/Contact</h2>
                 </div>
             </div>
         </section>
