@@ -12,6 +12,12 @@ const About = () => {
                     </div>
                 </div>
                 <div className='component-grid-right'>
+                    <div className='about-inner-video-button'>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" data-reactroot="">
+                            <path stroke-linejoin="round" stroke-linecap="round" stroke-width="1.5" stroke="#ffffff"
+                                  fill="none" d="M18 12L6 5V19L18 12Z"/>
+                        </svg>
+                    </div>
                     <div className='about-inner-video'>
 
                     </div>

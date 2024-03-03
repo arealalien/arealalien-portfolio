@@ -9,6 +9,7 @@ import Banner from "./components/Banner";
 import Loader from "./components/Loader";
 import Projects from "./components/Projects";
 import Gallery from "./components/Gallery";
+import Intro from "./components/Intro";
 import About from "./components/About";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
@@ -45,6 +46,7 @@ function App() {
                                 </div>
                             )}
                         </header>
+                        <Intro />
                         <About />
                         <Projects />
                         <Gallery />

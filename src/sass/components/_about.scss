@@ -1,22 +1,24 @@
 .about {
   width: calc(100vw - calc($view-width-padding / 2));
   min-height: 50em;
+  border-top: 1px solid hslac($white, .1);
+  border-bottom: 1px solid hslac($white, .1);
   @include flex-col();
 
   .component-grid-left {
-    @media (max-width: $layout-breakpoint-small) {
+    @media (max-width: $layout-breakpoint-xmedium) {
       grid-row: 2;
     }
   }
   .component-grid-right {
-    @media (max-width: $layout-breakpoint-small) {
+    @media (max-width: $layout-breakpoint-xmedium) {
       grid-row: 1;
     }
   }
   &-inner {
     gap: 8em;
     grid-template-columns: 1fr 65% !important;
-    @media (max-width: $layout-breakpoint-small) {
+    @media (max-width: $layout-breakpoint-xmedium) {
       gap: 4em;
       grid-template-columns: 1fr !important;
     }
@@ -25,8 +27,11 @@
       padding: 10em 0;
       height: 100%;
       @include flex-space-bet-start-col();
-      @media (max-width: $layout-breakpoint-small) {
-        padding: 2em 0;
+      @media (max-width: $layout-breakpoint-medium) {
+        padding: 6em 0;
+      }
+      @media (max-width: $layout-breakpoint-xmedium) {
+        padding: 2em 4em 10em 4em;
         gap: 4em;
       }
 
@@ -53,15 +58,49 @@
       position: relative;
       background-color: hslac($background-dark, 1);
       overflow: hidden;
+      @include flex-center();
+
       &::after {
         content: "";
         display: block;
         padding-bottom: 80%;
+        @media (max-width: $layout-breakpoint-xmedium) {
+          padding-bottom: 60%;
+        }
       }
 
       &-content {
 
       }
     }
+    &-video-button {
+      left: -7.5em;
+      width: 15em; height: 15em;
+      position: absolute;
+      background-color: hslac($background, 1);
+      border: 1px solid hslac($white, .1);
+      border-radius: 50%;
+      cursor: pointer;
+      z-index: 50;
+      @include flex-center();
+      @media (max-width: $layout-breakpoint-xmedium) {
+        left: auto;
+      }
+      @media (max-width: $layout-breakpoint-small) {
+        width: 10em; height: 10em;
+      }
+
+      svg {
+        width: 2.5em;
+        @media (max-width: $layout-breakpoint-small) {
+          width: 2em;
+        }
+      }
+    }
+  }
+  .component-grid-right {
+    position: relative;
+    @include flex-center();
+
   }
 }
