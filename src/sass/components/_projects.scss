@@ -1,5 +1,5 @@
 .projects {
-  padding: 15em 0;
+  padding: 20em 0;
   width: calc(100vw - calc($view-width-padding / 2));
   min-height: 50em;
   @include flex-col();
@@ -73,6 +73,7 @@
               border-bottom: 1px solid hslac($white, .1);
               letter-spacing: .4em;
               text-transform: uppercase;
+              cursor: pointer;
             }
           }
         }
