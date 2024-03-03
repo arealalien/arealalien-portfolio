@@ -31,7 +31,7 @@ const About = () => {
 
     const handleMouseEnter = (event) => {
         setIsHovering(true);
-        handleMouseMove(event); // Update button position immediately on hover
+        handleMouseMove(event);
     };
 
     const handleMouseLeave = () => {
@@ -60,7 +60,7 @@ const About = () => {
                         style={{
                             left: isHovering || isSmallScreen ? "auto" : "-7.5em",
                             transform: `translate(${buttonPosition.x}px, ${buttonPosition.y}px)`,
-                            transition: "transform 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94)",
+                            transition: "transform 0.35s cubic-bezier(.175, .685, .32, 0.94)",
                         }}
                     >
                         <svg

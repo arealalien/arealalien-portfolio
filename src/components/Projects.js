@@ -1,6 +1,7 @@
 import React from "react";
 
 const Projects = () => {
+
     return (
         <section className='projects'>
             <div className='projects-inner component-grid view-width'>
