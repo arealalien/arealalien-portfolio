@@ -42,7 +42,7 @@ const About = () => {
     return (
         <section className='about'>
             <div className='about-inner component-grid view-width'>
-                <div className='component-grid-left'>
+                <div className='component-grid-left cgl-space-bet'>
                     <div className='about-inner-left'>
                         <h2 className='component-grid-title'>/About Me</h2>
                         <h3 className='about-inner-left-title'>I craft engaging digital experiences that drive results</h3>
