@@ -59,7 +59,7 @@ const Projects = () => {
 
                         <div className='projects-inner-grid-item pigif'>
                             <div className='projects-inner-grid-item-image'>
-                                <img alt='' src={process.env.PUBLIC_URL + `/images/image-1.jpg`}/>
+                                <img alt='' src={process.env.PUBLIC_URL + `/images/gallery/image-1.jpg`}/>
                             </div>
                             <div className='projects-inner-grid-item-info'>
                                 <p className='projects-inner-grid-item-info-tag'>Website</p>
@@ -79,12 +79,12 @@ const Projects = () => {
                                 </div>
                             </div>
                             <div className='projects-inner-grid-item-image'>
-                                <img alt='' src={process.env.PUBLIC_URL + `/images/image-4.jpg`}/>
+                                <img alt='' src={process.env.PUBLIC_URL + `/images/gallery/image-12.jpg`}/>
                             </div>
                         </div>
                         <div className='projects-inner-grid-item pigif'>
                             <div className='projects-inner-grid-item-image'>
-                                <img alt='' src={process.env.PUBLIC_URL + `/images/image-5.jpg`}/>
+                                <img alt='' src={process.env.PUBLIC_URL + `/images/gallery/image-20.jpg`}/>
                             </div>
                             <div className='projects-inner-grid-item-info'>
                                 <p className='projects-inner-grid-item-info-tag'>Website</p>
@@ -105,7 +105,7 @@ const Projects = () => {
                                 </div>
                             </div>
                             <div className='projects-inner-grid-item-image'>
-                                <img alt='' src={process.env.PUBLIC_URL + `/images/image-3.jpg`}/>
+                                <img alt='' src={process.env.PUBLIC_URL + `/images/gallery/image-28.jpg`}/>
                             </div>
                         </div>
 
