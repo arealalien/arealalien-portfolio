@@ -8,6 +8,7 @@ const Gallery = () => {
                     <h2 className='component-grid-title'>/Gallery</h2>
                 </div>
                 <div className='component-grid-right'>
+
                 </div>
             </div>
         </section>

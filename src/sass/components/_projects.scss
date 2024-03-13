@@ -3,6 +3,7 @@
   width: calc(100vw - calc($view-width-padding / 2));
   min-height: 50em;
   @include flex-col();
+
   &-inner {
     &-grid {
       display: grid;
