@@ -57,6 +57,9 @@ body {
     cursor: pointer;
     transition: opacity 1s cubic-bezier($transition-main, 1);
     @include flex-center();
+    @media (max-width: $layout-breakpoint-small) {
+      display: none;
+    }
 
     &:hover {
       opacity: .5;
