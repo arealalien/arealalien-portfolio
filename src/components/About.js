@@ -84,7 +84,7 @@ const About = () => {
                     <div className='about-inner-video' onMouseMove={handleMouseMove}>
                         <div className='about-inner-video-overlay'></div>
                         <video className='about-inner-video-content' autoPlay muted loop>
-                            <source src={process.env.PUBLIC_URL + `/videos/about-min.webm`} type='video/webm'/>
+                            <source src={process.env.PUBLIC_URL + `/videos/about.webm`} type='video/webm'/>
                         </video>
                     </div>
                 </div>
