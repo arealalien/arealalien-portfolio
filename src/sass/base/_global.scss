@@ -54,8 +54,13 @@ body {
     width: 14em; height: 14em;
     position: sticky;
     transform: translateY(-75%);
+    cursor: pointer;
+    transition: opacity 1s cubic-bezier($transition-main, 1);
     @include flex-center();
 
+    &:hover {
+      opacity: .5;
+    }
     .circle-svg {
       width: 100%; height: 100%;
       .circle {
@@ -67,8 +72,6 @@ body {
         fill: none;
         stroke: hslac($white, 1);
         stroke-width: 1;
-        stroke-dasharray: 100 100;
-        transition: stroke-dashoffset 0.3s ease;
       }
     }
 
