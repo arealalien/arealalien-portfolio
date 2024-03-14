@@ -17,8 +17,8 @@
 #### Other things
 
 - [ ] Finish layout <span style="color:#ff213b">**✦**</span>
-  - [ ] Projects Section <span style="color:#ff4d61">**✦**</span>
-  - [ ] Showreel Section
+  - [x] ~~Projects Section~~ <span style="color:#ff4d61">**✦**</span>
+  - [x] ~~Showreel Section~~
   - [ ] About Section
   - [ ] Contact Section <span style="color:#ff4d61">**✦**</span>
 - [ ] Fix header on each page with separate picture on each 
