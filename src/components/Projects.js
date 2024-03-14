@@ -8,7 +8,7 @@ const Projects = () => {
     useEffect(() => {
         const handleScroll = () => {
             if (!projectsRef.current) return;
-            const projectsTop = projectsRef.current.getBoundingClientRect().top;
+            const projectsTop = projectsRef.current.offsetTop; // Get the top offset of the projects section
             const projectsHeight = projectsRef.current.offsetHeight;
             const windowHeight = window.innerHeight;
             const maxScroll = projectsTop + projectsHeight - windowHeight;
@@ -43,13 +43,13 @@ const Projects = () => {
                     <h2 className='component-grid-title'>/Projects</h2>
                     <div className='component-grid-ball'
                          style={{transform: `rotate(${rotateAngle}deg)`}}>
-                        <svg className="circle-svg" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-                            <circle className="circle" cx="50" cy="50" r="45"/>
-                            <circle className="fill" cx="50" cy="50" r="45"
-                                    style={{
-                                        strokeDasharray: `${scrollProgress * 100} 100`,
-                                        transition: "stroke-dasharray 0.3s ease"
-                                    }}/>
+                        <svg className='circle-svg' width="200" height="200" viewBox="0 0 100 100" version="1.1"
+                             xmlns="http://www.w3.org/2000/svg" style={{transform: 'rotate(-90deg)'}}>
+                            <circle className="fill" r="45" cx="50" cy="50"
+                                    stroke-dashoffset={`${(1 - scrollProgress) * 565.48}px`}
+                                    stroke-dasharray="565.48px"></circle>
+                            <circle className="circle" r="45" cx="50" cy="50" stroke-dashoffset="0"
+                                    stroke-dasharray="565.48px"></circle>
                         </svg>
                         <p className='component-grid-ball-title'>View All</p>
                     </div>

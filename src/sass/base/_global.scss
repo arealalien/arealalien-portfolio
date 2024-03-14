@@ -32,7 +32,7 @@ body {
   }
   .cgl-left-col {
     position: relative;
-    gap: 20em;
+    gap: 29em;
     @include flex-col-left();
   }
   .cgl-space-bet {
@@ -50,8 +50,10 @@ body {
     text-transform: uppercase;
   }
   &-ball {
+    top: 75%;
     width: 14em; height: 14em;
     position: sticky;
+    transform: translateY(-75%);
     @include flex-center();
 
     .circle-svg {
