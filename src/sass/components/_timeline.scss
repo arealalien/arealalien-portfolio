@@ -24,8 +24,8 @@
           place-items: center;
           gap: 2.5em;
           &-image {
-            top: calc(-50% + -5em); left: 50%;
-            width: 20em; height: 20em;
+            top: calc(-50% + -8em); left: calc(50% + 2em);
+            width: 25em; height: 25em;
             position: absolute;
             border-radius: 50%;
             pointer-events: none;
