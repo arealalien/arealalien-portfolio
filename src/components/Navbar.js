@@ -8,6 +8,7 @@ const Navbar = () => {
     const [menuVisible, setMenuVisible] = useState(false);
     const [shiftAmount, setShiftAmount] = useState(0);
     const [skewAngle, setSkewAngle] = useState(0);
+    const [imageSkewAngle, setImageSkewAngle] = useState(0);
     const [scale, setScale] = useState(1);
     const [rotation, setRotation] = useState(0);
     const [pinOpacity, setPinOpacity] = useState(0);
@@ -47,8 +48,13 @@ const Navbar = () => {
         const skew = distanceFromCenter / rect.width * maxSkewAngle * skewFactor * -1; // Reversed direction
         setSkewAngle(skew);
 
+        const maxImageSkewAngle = 80;
+        const imageskewFactor = 0.9;
+        const imageSkew = distanceFromCenter / rect.width * maxImageSkewAngle * imageskewFactor * -1; // Reversed direction
+        setImageSkewAngle(imageSkew);
+
         const maxRotation = 20;
-        const rotationFactor = 0.5;
+        const rotationFactor = 0.7;
         const rotation = distanceFromCenter / rect.width * maxRotation * rotationFactor;
         setRotation(rotation);
     }
@@ -57,6 +63,7 @@ const Navbar = () => {
     const handleMouseLeave = () => {
         setShiftAmount(0);
         setSkewAngle(0);
+        setImageSkewAngle(0);
         setScale(1);
         setRotation(0);
     };
@@ -69,6 +76,7 @@ const Navbar = () => {
     const handleMouseLeaveText = () => {
         setShiftAmount(0);
         setSkewAngle(0);
+        setImageSkewAngle(0);
         setScale(1);
         setPinOpacity(0.1);
     };
@@ -237,7 +245,7 @@ const Navbar = () => {
                     </li>
                 </ul>
                 <div className='menu-inner-center'
-                     style={{transform: `scale(${scale}) rotate(${rotation}deg) skewX(${skewAngle}deg)`}}>
+                     style={{transform: `scale(${scale}) rotate(${rotation}deg) skewX(${imageSkewAngle}deg)`}}>
                     <div className='menu-inner-center-pin' style={{opacity: pinOpacity}}></div>
                 </div>
             </div>
