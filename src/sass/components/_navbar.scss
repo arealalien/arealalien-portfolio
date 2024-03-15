@@ -110,6 +110,25 @@
     background-color: hslac($background-dark, 1);
     transform: translateY(-100%);
     transition: transform 1s cubic-bezier($transition-main, 1);
+    @include flex-col();
+
+    &-list {
+      position: absolute;
+      gap: 5em;
+      transition: all 1s cubic-bezier($transition-main, 1);
+      @include flex-center();
+
+      &-item {
+        &-link {
+          color: transparent;
+          -webkit-text-stroke: 1px hslac($white, 1);
+          font-size: calc($heading-large + 6rem);
+          font-family: $font-secondary;
+          font-weight: 700;
+          text-decoration: none;
+        }
+      }
+    }
   }
   .slide-down {
     transform: translateY(0);

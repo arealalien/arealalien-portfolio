@@ -1,9 +1,11 @@
 import React, { useState, useEffect } from "react";
 import { motion } from "framer-motion";
+import { NavLink } from "react-router-dom";
 
 const Navbar = () => {
     const [scrollPosition, setScrollPosition] = useState(0);
     const [menuVisible, setMenuVisible] = useState(false);
+    const [shiftAmount, setShiftAmount] = useState(0);
 
     useEffect(() => {
         const handleScroll = () => {
@@ -21,6 +23,25 @@ const Navbar = () => {
 
     const toggleMenu = () => {
         setMenuVisible(prevState => !prevState);
+    };
+
+    const handleMouseMove = (event) => {
+        const rect = event.currentTarget.getBoundingClientRect();
+        const mouseX = event.clientX;
+        const menuCenterX = rect.left + rect.width / 2;
+        const distanceFromCenter = mouseX - menuCenterX;
+        const maxShift = 500; // Adjust this value as needed
+
+        // Calculate the shift amount based on the distance from the center
+        const shiftAmount = (distanceFromCenter / menuCenterX) * maxShift * -1; // Reversed direction
+
+        // Set the shift amount
+        setShiftAmount(shiftAmount);
+    };
+
+    const handleMouseLeave = () => {
+        // Reset the shift amount to center when mouse leaves
+        setShiftAmount(0);
     };
 
     return (
@@ -78,7 +99,15 @@ const Navbar = () => {
           </div>
       </nav>
         <div className='menu' style={{ pointerEvents: menuVisible ? "auto" : "none" }}>
-            <div className={`menu-inner ${menuVisible ? 'slide-down' : ''}`}></div>
+            <div className={`menu-inner ${menuVisible ? 'slide-down' : ''}`} onMouseMove={handleMouseMove} onMouseLeave={handleMouseLeave}>
+                <ul className='menu-inner-list' style={{ transform: `translateX(${shiftAmount}px)` }}>
+                    <li className='menu-inner-list-item'><NavLink to="/" className='menu-inner-list-item-link'>Home</NavLink></li>
+                    <li className='menu-inner-list-item'><NavLink to="/projects" className='menu-inner-list-item-link'>Projects</NavLink></li>
+                    <li className='menu-inner-list-item'><NavLink to="/gallery" className='menu-inner-list-item-link'>Gallery</NavLink></li>
+                    <li className='menu-inner-list-item'><NavLink to="/about" className='menu-inner-list-item-link'>About</NavLink></li>
+                    <li className='menu-inner-list-item'><NavLink to="/contact" className='menu-inner-list-item-link'>Contact</NavLink></li>
+                </ul>
+            </div>
         </div>
     </motion.div>
     );

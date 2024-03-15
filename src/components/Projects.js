@@ -46,7 +46,7 @@ const Projects = () => {
                         <svg className='circle-svg' width="200" height="200" viewBox="0 0 100 100" version="1.1"
                              xmlns="http://www.w3.org/2000/svg" style={{transform: 'rotate(-90deg)'}}>
                             <circle className="fill" r="45" cx="50" cy="50"
-                                    stroke-dashoffset={`${(1 - scrollProgress) * 565.48}px`}
+                                    stroke-dashoffset={`${(1 - scrollProgress / 2) * 565.48}px`}
                                     stroke-dasharray="565.48px"></circle>
                             <circle className="circle" r="45" cx="50" cy="50" stroke-dashoffset="0"
                                     stroke-dasharray="565.48px"></circle>
