@@ -1,8 +1,12 @@
 import React, { useState, useEffect, useRef } from "react";
 
+import Image from "./Image";
+
 const Timeline = () => {
     const [scrollProgress, setScrollProgress] = useState(0);
     const [rotateAngle, setRotateAngle] = useState(0);
+    const [buttonPosition, setButtonPosition] = useState({ x: 0, y: 0 });
+    const [hoveredItem, setHoveredItem] = useState(null);
     const timelineRef = useRef(null);
 
     useEffect(() => {
@@ -36,6 +40,30 @@ const Timeline = () => {
         };
     }, []);
 
+    const handleMouseMove = (event) => {
+        const rect = event.currentTarget.getBoundingClientRect();
+        const centerX = rect.left + rect.width / 2;
+        const centerY = rect.top + rect.height / 2;
+        const deltaX = event.clientX - centerX;
+        const deltaY = event.clientY - centerY;
+
+        const maxSkewAngle = 80;
+        const skewFactor = 0.2;
+        const skewX = deltaY / rect.height * maxSkewAngle * skewFactor;
+        const skewY = deltaX / rect.width * maxSkewAngle * skewFactor;
+
+        setButtonPosition({ x: deltaX, y: deltaY, skewX, skewY });
+    };
+
+    const handleMouseEnter = (itemId) => {
+        setHoveredItem(itemId);
+    };
+
+    const handleMouseLeave = () => {
+        setHoveredItem(null);
+        setButtonPosition({ x: 0, y: 0 });
+    };
+
     return (
         <section className='timeline' ref={timelineRef}>
             <div className='timeline-inner component-grid view-width'>
@@ -57,10 +85,20 @@ const Timeline = () => {
                 <div className='component-grid-right'>
                     <div className='timeline-inner-grid'>
 
-                        <div className='timeline-inner-grid-item'>
+                        <div className='timeline-inner-grid-item'
+                             onMouseMove={handleMouseMove}
+                             onMouseEnter={() => handleMouseEnter('image-12')}
+                             onMouseLeave={handleMouseLeave}>
                             <div className='timeline-inner-grid-item-content'>
-                                <img className='timeline-inner-grid-item-content-image'
-                                     src={process.env.PUBLIC_URL + `/images/gallery/image-12.jpg`}/>
+                                <div className='timeline-inner-grid-item-content-image'
+                                     style={{
+                                         transform: `translate(${buttonPosition.x}px, ${buttonPosition.y}px) skew(${buttonPosition.skewX}deg, ${buttonPosition.skewY}deg) scale(${hoveredItem === 'image-12' ? "1, 1" : "0, 0"})`,
+                                         opacity: hoveredItem === 'image-12' ? 1 : 0,
+                                         transition: 'transform 1s cubic-bezier(.175, .685, .32, 1), opacity .3s cubic-bezier(.175, .285, .32, 1), width .2s cubic-bezier(.175, .285, .32, 1)'
+                                     }}
+                                >
+                                    <Image src={process.env.PUBLIC_URL + `/images/gallery/image-12.webp`} fallback={process.env.PUBLIC_URL + `/images/gallery/image-12.jpg`} />
+                                </div>
                                 <p className='timeline-inner-grid-item-content-date'>2024.03.07</p>
                                 <div className='timeline-inner-grid-item-content-divider'></div>
                                 <div className='timeline-inner-grid-item-content-title'>
@@ -68,10 +106,20 @@ const Timeline = () => {
                                 </div>
                             </div>
                         </div>
-                        <div className='timeline-inner-grid-item'>
+                        <div className='timeline-inner-grid-item'
+                             onMouseMove={handleMouseMove}
+                             onMouseEnter={() => handleMouseEnter('image-1')}
+                             onMouseLeave={handleMouseLeave}>
                             <div className='timeline-inner-grid-item-content'>
-                                <img className='timeline-inner-grid-item-content-image'
-                                     src={process.env.PUBLIC_URL + `/images/gallery/image-1.jpg`}/>
+                                <div className='timeline-inner-grid-item-content-image'
+                                     style={{
+                                         transform: `translate(${buttonPosition.x}px, ${buttonPosition.y}px) skew(${buttonPosition.skewX}deg, ${buttonPosition.skewY}deg) scale(${hoveredItem === 'image-1' ? "1, 1" : "0, 0"})`,
+                                         opacity: hoveredItem === 'image-1' ? 1 : 0,
+                                         transition: 'transform 1s cubic-bezier(.175, .685, .32, 1), opacity .3s cubic-bezier(.175, .285, .32, 1), width .2s cubic-bezier(.175, .285, .32, 1)'
+                                     }}
+                                >
+                                    <Image src={process.env.PUBLIC_URL + `/images/gallery/image-1.webp`} fallback={process.env.PUBLIC_URL + `/images/gallery/image-1.jpg`} />
+                                </div>
                                 <p className='timeline-inner-grid-item-content-date'>2024.01.24</p>
                                 <div className='timeline-inner-grid-item-content-divider'></div>
                                 <div className='timeline-inner-grid-item-content-title'>
@@ -80,10 +128,20 @@ const Timeline = () => {
                                 </div>
                             </div>
                         </div>
-                        <div className='timeline-inner-grid-item'>
+                        <div className='timeline-inner-grid-item'
+                             onMouseMove={handleMouseMove}
+                             onMouseEnter={() => handleMouseEnter('image-20')}
+                             onMouseLeave={handleMouseLeave}>
                             <div className='timeline-inner-grid-item-content'>
-                                <img className='timeline-inner-grid-item-content-image'
-                                     src={process.env.PUBLIC_URL + `/images/gallery/image-20.jpg`}/>
+                                <div className='timeline-inner-grid-item-content-image'
+                                     style={{
+                                         transform: `translate(${buttonPosition.x}px, ${buttonPosition.y}px) skew(${buttonPosition.skewX}deg, ${buttonPosition.skewY}deg) scale(${hoveredItem === 'image-20' ? "1, 1" : "0, 0"})`,
+                                         opacity: hoveredItem === 'image-20' ? 1 : 0,
+                                         transition: 'transform 1s cubic-bezier(.175, .685, .32, 1), opacity .3s cubic-bezier(.175, .285, .32, 1), width .2s cubic-bezier(.175, .285, .32, 1)'
+                                     }}
+                                >
+                                    <Image src={process.env.PUBLIC_URL + `/images/gallery/image-20.webp`} fallback={process.env.PUBLIC_URL + `/images/gallery/image-20.jpg`} />
+                                </div>
                                 <p className='timeline-inner-grid-item-content-date'>2023.11.15</p>
                                 <div className='timeline-inner-grid-item-content-divider'></div>
                                 <div className='timeline-inner-grid-item-content-title'>
@@ -92,10 +150,20 @@ const Timeline = () => {
                                 </div>
                             </div>
                         </div>
-                        <div className='timeline-inner-grid-item'>
+                        <div className='timeline-inner-grid-item'
+                             onMouseMove={handleMouseMove}
+                             onMouseEnter={() => handleMouseEnter('image-28')}
+                             onMouseLeave={handleMouseLeave}>
                             <div className='timeline-inner-grid-item-content'>
-                                <img className='timeline-inner-grid-item-content-image'
-                                     src={process.env.PUBLIC_URL + `/images/gallery/image-28.jpg`}/>
+                                <div className='timeline-inner-grid-item-content-image'
+                                     style={{
+                                         transform: `translate(${buttonPosition.x}px, ${buttonPosition.y}px) skew(${buttonPosition.skewX}deg, ${buttonPosition.skewY}deg) scale(${hoveredItem === 'image-28' ? "1, 1" : "0, 0"})`,
+                                         opacity: hoveredItem === 'image-28' ? 1 : 0,
+                                         transition: 'transform 1s cubic-bezier(.175, .685, .32, 1), opacity .3s cubic-bezier(.175, .285, .32, 1), width .2s cubic-bezier(.175, .285, .32, 1)'
+                                     }}
+                                >
+                                    <Image src={process.env.PUBLIC_URL + `/images/gallery/image-28.webp`} fallback={process.env.PUBLIC_URL + `/images/gallery/image-28.jpg`}/>
+                                </div>
                                 <p className='timeline-inner-grid-item-content-date'>2023.10.28</p>
                                 <div className='timeline-inner-grid-item-content-divider'></div>
                                 <div className='timeline-inner-grid-item-content-title'>
@@ -104,10 +172,20 @@ const Timeline = () => {
                                 </div>
                             </div>
                         </div>
-                        <div className='timeline-inner-grid-item'>
+                        <div className='timeline-inner-grid-item'
+                             onMouseMove={handleMouseMove}
+                             onMouseEnter={() => handleMouseEnter('image-15')}
+                             onMouseLeave={handleMouseLeave}>
                             <div className='timeline-inner-grid-item-content'>
-                                <img className='timeline-inner-grid-item-content-image'
-                                     src={process.env.PUBLIC_URL + `/images/gallery/image-12.jpg`}/>
+                                <div className='timeline-inner-grid-item-content-image'
+                                     style={{
+                                         transform: `translate(${buttonPosition.x}px, ${buttonPosition.y}px) skew(${buttonPosition.skewX}deg, ${buttonPosition.skewY}deg) scale(${hoveredItem === 'image-15' ? "1, 1" : "0, 0"})`,
+                                         opacity: hoveredItem === 'image-15' ? 1 : 0,
+                                         transition: 'transform 1s cubic-bezier(.175, .685, .32, 1), opacity .3s cubic-bezier(.175, .285, .32, 1), width .2s cubic-bezier(.175, .285, .32, 1)'
+                                     }}
+                                >
+                                    <Image src={process.env.PUBLIC_URL + `/images/gallery/image-15.webp`} fallback={process.env.PUBLIC_URL + `/images/gallery/image-15.jpg`} />
+                                </div>
                                 <p className='timeline-inner-grid-item-content-date'>2023.03.07</p>
                                 <div className='timeline-inner-grid-item-content-divider'></div>
                                 <div className='timeline-inner-grid-item-content-title'>
@@ -115,10 +193,20 @@ const Timeline = () => {
                                 </div>
                             </div>
                         </div>
-                        <div className='timeline-inner-grid-item'>
+                        <div className='timeline-inner-grid-item'
+                             onMouseMove={handleMouseMove}
+                             onMouseEnter={() => handleMouseEnter('image-22')}
+                             onMouseLeave={handleMouseLeave}>
                             <div className='timeline-inner-grid-item-content'>
-                                <img className='timeline-inner-grid-item-content-image'
-                                     src={process.env.PUBLIC_URL + `/images/gallery/image-1.jpg`}/>
+                                <div className='timeline-inner-grid-item-content-image'
+                                     style={{
+                                         transform: `translate(${buttonPosition.x}px, ${buttonPosition.y}px) skew(${buttonPosition.skewX}deg, ${buttonPosition.skewY}deg) scale(${hoveredItem === 'image-22' ? "1, 1" : "0, 0"})`,
+                                         opacity: hoveredItem === 'image-22' ? 1 : 0,
+                                         transition: 'transform 1s cubic-bezier(.175, .685, .32, 1), opacity .3s cubic-bezier(.175, .285, .32, 1), width .2s cubic-bezier(.175, .285, .32, 1)'
+                                     }}
+                                >
+                                    <Image src={process.env.PUBLIC_URL + `/images/gallery/image-22.webp`} fallback={process.env.PUBLIC_URL + `/images/gallery/image-22.jpg`} />
+                                </div>
                                 <p className='timeline-inner-grid-item-content-date'>2023.01.24</p>
                                 <div className='timeline-inner-grid-item-content-divider'></div>
                                 <div className='timeline-inner-grid-item-content-title'>
@@ -127,10 +215,20 @@ const Timeline = () => {
                                 </div>
                             </div>
                         </div>
-                        <div className='timeline-inner-grid-item'>
+                        <div className='timeline-inner-grid-item'
+                             onMouseMove={handleMouseMove}
+                             onMouseEnter={() => handleMouseEnter('image-27')}
+                             onMouseLeave={handleMouseLeave}>
                             <div className='timeline-inner-grid-item-content'>
-                                <img className='timeline-inner-grid-item-content-image'
-                                     src={process.env.PUBLIC_URL + `/images/gallery/image-20.jpg`}/>
+                                <div className='timeline-inner-grid-item-content-image'
+                                     style={{
+                                         transform: `translate(${buttonPosition.x}px, ${buttonPosition.y}px) skew(${buttonPosition.skewX}deg, ${buttonPosition.skewY}deg) scale(${hoveredItem === 'image-27' ? "1, 1" : "0, 0"})`,
+                                         opacity: hoveredItem === 'image-27' ? 1 : 0,
+                                         transition: 'transform 1s cubic-bezier(.175, .685, .32, 1), opacity .3s cubic-bezier(.175, .285, .32, 1), width .2s cubic-bezier(.175, .285, .32, 1)'
+                                     }}
+                                >
+                                    <Image src={process.env.PUBLIC_URL + `/images/gallery/image-27.webp`} fallback={process.env.PUBLIC_URL + `/images/gallery/image-27.jpg`} />
+                                </div>
                                 <p className='timeline-inner-grid-item-content-date'>2022.11.15</p>
                                 <div className='timeline-inner-grid-item-content-divider'></div>
                                 <div className='timeline-inner-grid-item-content-title'>
@@ -139,10 +237,20 @@ const Timeline = () => {
                                 </div>
                             </div>
                         </div>
-                        <div className='timeline-inner-grid-item'>
+                        <div className='timeline-inner-grid-item'
+                             onMouseMove={handleMouseMove}
+                             onMouseEnter={() => handleMouseEnter('image-17')}
+                             onMouseLeave={handleMouseLeave}>
                             <div className='timeline-inner-grid-item-content'>
-                                <img className='timeline-inner-grid-item-content-image'
-                                     src={process.env.PUBLIC_URL + `/images/gallery/image-28.jpg`}/>
+                                <div className='timeline-inner-grid-item-content-image'
+                                     style={{
+                                         transform: `translate(${buttonPosition.x}px, ${buttonPosition.y}px) skew(${buttonPosition.skewX}deg, ${buttonPosition.skewY}deg) scale(${hoveredItem === 'image-17' ? "1, 1" : "0, 0"})`,
+                                         opacity: hoveredItem === 'image-17' ? 1 : 0,
+                                         transition: 'transform 1s cubic-bezier(.175, .685, .32, 1), opacity .3s cubic-bezier(.175, .285, .32, 1), width .2s cubic-bezier(.175, .285, .32, 1)'
+                                     }}
+                                >
+                                    <Image src={process.env.PUBLIC_URL + `/images/gallery/image-17.webp`} fallback={process.env.PUBLIC_URL + `/images/gallery/image-17.jpg`} />
+                                </div>
                                 <p className='timeline-inner-grid-item-content-date'>2022.10.28</p>
                                 <div className='timeline-inner-grid-item-content-divider'></div>
                                 <div className='timeline-inner-grid-item-content-title'>
