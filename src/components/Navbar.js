@@ -1,11 +1,18 @@
 import React, { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import { NavLink } from "react-router-dom";
+import Image from "./Image";
 
 const Navbar = () => {
     const [scrollPosition, setScrollPosition] = useState(0);
     const [menuVisible, setMenuVisible] = useState(false);
     const [shiftAmount, setShiftAmount] = useState(0);
+    const [skewAngle, setSkewAngle] = useState(0);
+    const [scale, setScale] = useState(1);
+    const [rotation, setRotation] = useState(0);
+    const [pinOpacity, setPinOpacity] = useState(0);
+    const [buttonPosition, setButtonPosition] = useState({ x: 0, y: 0 });
+    const [hoveredItem, setHoveredItem] = useState(null);
 
     useEffect(() => {
         const handleScroll = () => {
@@ -30,19 +37,66 @@ const Navbar = () => {
         const mouseX = event.clientX;
         const menuCenterX = rect.left + rect.width / 2;
         const distanceFromCenter = mouseX - menuCenterX;
-        const maxShift = 500; // Adjust this value as needed
+        const maxShift = 500;
 
-        // Calculate the shift amount based on the distance from the center
         const shiftAmount = (distanceFromCenter / menuCenterX) * maxShift * -1; // Reversed direction
-
-        // Set the shift amount
         setShiftAmount(shiftAmount);
-    };
+
+        const maxSkewAngle = 80;
+        const skewFactor = 0.5;
+        const skew = distanceFromCenter / rect.width * maxSkewAngle * skewFactor * -1; // Reversed direction
+        setSkewAngle(skew);
+
+        const maxRotation = 20;
+        const rotationFactor = 0.5;
+        const rotation = distanceFromCenter / rect.width * maxRotation * rotationFactor;
+        setRotation(rotation);
+    }
+
 
     const handleMouseLeave = () => {
-        // Reset the shift amount to center when mouse leaves
         setShiftAmount(0);
+        setSkewAngle(0);
+        setScale(1);
+        setRotation(0);
     };
+
+    const handleMouseEnterText = () => {
+        setScale(1.15);
+        setPinOpacity(1);
+    }
+
+    const handleMouseLeaveText = () => {
+        setShiftAmount(0);
+        setSkewAngle(0);
+        setScale(1);
+        setPinOpacity(0.1);
+    };
+
+    const handleMouseItemMove = (event) => {
+        const rect = event.currentTarget.getBoundingClientRect();
+        const centerX = rect.left + rect.width / 2;
+        const centerY = rect.top + rect.height / 2;
+        const deltaX = event.clientX - centerX;
+        const deltaY = event.clientY - centerY;
+
+        const maxSkewAngle = 80;
+        const skewFactor = 0.2;
+        const skewX = deltaY / rect.height * maxSkewAngle * skewFactor;
+        const skewY = deltaX / rect.width * maxSkewAngle * skewFactor;
+
+        setButtonPosition({ x: deltaX, y: deltaY, skewX, skewY });
+    };
+
+    const handleMouseItemEnter = (itemId) => {
+        setHoveredItem(itemId);
+    };
+
+    const handleMouseItemLeave = () => {
+        setHoveredItem(null);
+        setButtonPosition({ x: 0, y: 0 });
+    };
+
 
     return (
     <motion.div
@@ -100,13 +154,92 @@ const Navbar = () => {
       </nav>
         <div className='menu' style={{ pointerEvents: menuVisible ? "auto" : "none" }}>
             <div className={`menu-inner ${menuVisible ? 'slide-down' : ''}`} onMouseMove={handleMouseMove} onMouseLeave={handleMouseLeave}>
-                <ul className='menu-inner-list' style={{ transform: `translateX(${shiftAmount}px)` }}>
-                    <li className='menu-inner-list-item'><NavLink to="/" className='menu-inner-list-item-link'>Home</NavLink></li>
-                    <li className='menu-inner-list-item'><NavLink to="/projects" className='menu-inner-list-item-link'>Projects</NavLink></li>
-                    <li className='menu-inner-list-item'><NavLink to="/gallery" className='menu-inner-list-item-link'>Gallery</NavLink></li>
-                    <li className='menu-inner-list-item'><NavLink to="/about" className='menu-inner-list-item-link'>About</NavLink></li>
-                    <li className='menu-inner-list-item'><NavLink to="/contact" className='menu-inner-list-item-link'>Contact</NavLink></li>
+                <ul className='menu-inner-list' style={{transform: `translateX(${shiftAmount}px) skewX(${skewAngle}deg)`}} onMouseEnter={handleMouseEnterText} onMouseLeave={handleMouseLeaveText}>
+                    <li className='menu-inner-list-item'
+                        onMouseMove={handleMouseItemMove}
+                        onMouseEnter={() => handleMouseItemEnter('image-7')}
+                        onMouseLeave={handleMouseItemLeave}>
+                        <div className='menu-inner-list-item-image'
+                             style={{
+                                 transform: `translate(${buttonPosition.x}px, ${buttonPosition.y}px) skew(${buttonPosition.skewX}deg, ${buttonPosition.skewY}deg) scale(${hoveredItem === 'image-7' ? "1, 1" : "0, 0"})`,
+                                 opacity: hoveredItem === 'image-7' ? 1 : 0,
+                                 transition: 'transform 1s cubic-bezier(.175, .685, .32, 1), opacity .3s cubic-bezier(.175, .285, .32, 1), width .2s cubic-bezier(.175, .285, .32, 1)'
+                             }}
+                        >
+                            <Image src={process.env.PUBLIC_URL + `/images/gallery/image-7.webp`}
+                                   fallback={process.env.PUBLIC_URL + `/images/gallery/image-7.jpg`}/>
+                        </div>
+                        <NavLink to="/" className='menu-inner-list-item-link'>Home</NavLink>
+                    </li>
+                    <li className='menu-inner-list-item'
+                        onMouseMove={handleMouseItemMove}
+                        onMouseEnter={() => handleMouseItemEnter('image-1')}
+                        onMouseLeave={handleMouseItemLeave}>
+                        <div className='menu-inner-list-item-image'
+                             style={{
+                                 transform: `translate(${buttonPosition.x}px, ${buttonPosition.y}px) skew(${buttonPosition.skewX}deg, ${buttonPosition.skewY}deg) scale(${hoveredItem === 'image-1' ? "1, 1" : "0, 0"})`,
+                                 opacity: hoveredItem === 'image-1' ? 1 : 0,
+                                 transition: 'transform 1s cubic-bezier(.175, .685, .32, 1), opacity .3s cubic-bezier(.175, .285, .32, 1), width .2s cubic-bezier(.175, .285, .32, 1)'
+                             }}
+                        >
+                            <Image src={process.env.PUBLIC_URL + `/images/gallery/image-1.webp`}
+                                   fallback={process.env.PUBLIC_URL + `/images/gallery/image-1.jpg`}/>
+                        </div>
+                        <NavLink to="/projects" className='menu-inner-list-item-link'>Projects</NavLink>
+                    </li>
+                    <li className='menu-inner-list-item'
+                        onMouseMove={handleMouseItemMove}
+                        onMouseEnter={() => handleMouseItemEnter('image-27')}
+                        onMouseLeave={handleMouseItemLeave}>
+                        <div className='menu-inner-list-item-image'
+                             style={{
+                                 transform: `translate(${buttonPosition.x}px, ${buttonPosition.y}px) skew(${buttonPosition.skewX}deg, ${buttonPosition.skewY}deg) scale(${hoveredItem === 'image-27' ? "1, 1" : "0, 0"})`,
+                                 opacity: hoveredItem === 'image-27' ? 1 : 0,
+                                 transition: 'transform 1s cubic-bezier(.175, .685, .32, 1), opacity .3s cubic-bezier(.175, .285, .32, 1), width .2s cubic-bezier(.175, .285, .32, 1)'
+                             }}
+                        >
+                            <Image src={process.env.PUBLIC_URL + `/images/gallery/image-27.webp`}
+                                   fallback={process.env.PUBLIC_URL + `/images/gallery/image-27.jpg`}/>
+                        </div>
+                        <NavLink to="/gallery" className='menu-inner-list-item-link'>Gallery</NavLink>
+                    </li>
+                    <li className='menu-inner-list-item'
+                        onMouseMove={handleMouseItemMove}
+                        onMouseEnter={() => handleMouseItemEnter('image-12')}
+                        onMouseLeave={handleMouseItemLeave}>
+                        <div className='menu-inner-list-item-image'
+                             style={{
+                                 transform: `translate(${buttonPosition.x}px, ${buttonPosition.y}px) skew(${buttonPosition.skewX}deg, ${buttonPosition.skewY}deg) scale(${hoveredItem === 'image-12' ? "1, 1" : "0, 0"})`,
+                                 opacity: hoveredItem === 'image-12' ? 1 : 0,
+                                 transition: 'transform 1s cubic-bezier(.175, .685, .32, 1), opacity .3s cubic-bezier(.175, .285, .32, 1), width .2s cubic-bezier(.175, .285, .32, 1)'
+                             }}
+                        >
+                            <Image src={process.env.PUBLIC_URL + `/images/gallery/image-12.webp`}
+                                   fallback={process.env.PUBLIC_URL + `/images/gallery/image-12.jpg`}/>
+                        </div>
+                        <NavLink to="/about" className='menu-inner-list-item-link'>About</NavLink>
+                    </li>
+                    <li className='menu-inner-list-item'
+                        onMouseMove={handleMouseItemMove}
+                        onMouseEnter={() => handleMouseItemEnter('image-20')}
+                        onMouseLeave={handleMouseItemLeave}>
+                        <div className='menu-inner-list-item-image'
+                             style={{
+                                 transform: `translate(${buttonPosition.x}px, ${buttonPosition.y}px) skew(${buttonPosition.skewX}deg, ${buttonPosition.skewY}deg) scale(${hoveredItem === 'image-20' ? "1, 1" : "0, 0"})`,
+                                 opacity: hoveredItem === 'image-20' ? 1 : 0,
+                                 transition: 'transform 1s cubic-bezier(.175, .685, .32, 1), opacity .3s cubic-bezier(.175, .285, .32, 1), width .2s cubic-bezier(.175, .285, .32, 1)'
+                             }}
+                        >
+                            <Image src={process.env.PUBLIC_URL + `/images/gallery/image-20.webp`}
+                                   fallback={process.env.PUBLIC_URL + `/images/gallery/image-20.jpg`}/>
+                        </div>
+                        <NavLink to="/contact" className='menu-inner-list-item-link'>Contact</NavLink>
+                    </li>
                 </ul>
+                <div className='menu-inner-center'
+                     style={{transform: `scale(${scale}) rotate(${rotation}deg) skewX(${skewAngle}deg)`}}>
+                    <div className='menu-inner-center-pin' style={{opacity: pinOpacity}}></div>
+                </div>
             </div>
         </div>
     </motion.div>
