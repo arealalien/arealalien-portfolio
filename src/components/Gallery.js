@@ -27,6 +27,14 @@ const Gallery = () => {
                             <img className='gallery-inner-showcase-item-background gis-wide'
                                  src={process.env.PUBLIC_URL + `/images/gallery/image-29.jpg`}/>
                         </div>
+                        <div className='gallery-inner-showcase-item'>
+                            <img className='gallery-inner-showcase-item-background gis-wide'
+                                 src={process.env.PUBLIC_URL + `/images/gallery/image-20.jpg`}/>
+                        </div>
+                        <div className='gallery-inner-showcase-item'>
+                            <img className='gallery-inner-showcase-item-background gis-wide'
+                                 src={process.env.PUBLIC_URL + `/images/gallery/image-4.jpg`}/>
+                        </div>
                     </div>
                 </div>
             </div>

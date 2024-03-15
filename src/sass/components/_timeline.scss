@@ -1,0 +1,61 @@
+.timeline {
+  padding: 20em 0;
+  width: calc(100vw - calc($view-width-padding / 2));
+  min-height: 50em;
+  @include flex-col();
+
+  &-inner {
+    &-grid {
+      @include flex-col-start-center();
+
+      &-item {
+        width: 100%;
+        border-top: 1px solid hslac($white, .1);
+        cursor: pointer;
+        &:last-child {
+          border-bottom: 1px solid hslac($white, .1);
+        }
+
+        &-content {
+          padding: 6em 0;
+          position: relative;
+          display: grid;
+          grid-template-columns: auto auto 1fr;
+          place-items: center;
+          gap: 2.5em;
+          &-image {
+            width: 50%;
+            position: absolute;
+            pointer-events: none;
+            user-select: none;
+            opacity: 0;
+            z-index: 50;
+          }
+          &-date, &-title-text {
+            font-family: $font-secondary;
+            font-size: $heading-medium;
+            font-weight: 600;
+            line-height: 1.3;
+          }
+          &-date {
+
+          }
+          &-title {
+            width: 100%;
+            position: relative;
+            overflow: hidden;
+            @include flex-left();
+            &-text {
+              color: transparent;
+              -webkit-text-stroke: 1px hslac($white, 1);
+            }
+          }
+          &-divider {
+            width: 6em; height: 1px;
+            background-color: hslac($white, .1);
+          }
+        }
+      }
+    }
+  }
+}

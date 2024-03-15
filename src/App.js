@@ -9,6 +9,7 @@ import Banner from "./components/Banner";
 import Loader from "./components/Loader";
 import Projects from "./components/Projects";
 import Gallery from "./components/Gallery";
+import Timeline from "./components/Timeline";
 import Intro from "./components/Intro";
 import About from "./components/About";
 import Contact from "./components/Contact";
@@ -50,6 +51,7 @@ function App() {
                         <About />
                         <Projects />
                         <Gallery />
+                        <Timeline />
                         <Contact />
                         <Footer />
                     </>
