@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 import { NavLink } from "react-router-dom";
 import Image from "./Image";
 
-const Navbar = () => {
+const Navbar  = ({ pagename }) => {
     const [scrollPosition, setScrollPosition] = useState(0);
     const [menuVisible, setMenuVisible] = useState(false);
     const [shiftAmount, setShiftAmount] = useState(0);
@@ -11,7 +11,7 @@ const Navbar = () => {
     const [imageSkewAngle, setImageSkewAngle] = useState(0);
     const [scale, setScale] = useState(1);
     const [rotation, setRotation] = useState(0);
-    const [pinOpacity, setPinOpacity] = useState(0);
+    const [pinOpacity, setPinOpacity] = useState(0.1);
     const [buttonPosition, setButtonPosition] = useState({ x: 0, y: 0 });
     const [hoveredItem, setHoveredItem] = useState(null);
 
@@ -135,7 +135,7 @@ const Navbar = () => {
           </div>
         </div>
           <div className='navbar-inner-right'>
-              <p className='navbar-inner-right-title'>Home</p>
+              <p className='navbar-inner-right-title'>{pagename}</p>
               <div className='navbar-inner-right-line'></div>
               <div className='navbar-inner-right-burger'>
                   <svg className='navbar-inner-right-burger-button' xmlns="http://www.w3.org/2000/svg" viewBox="0 0 10 10" onClick={toggleMenu}>

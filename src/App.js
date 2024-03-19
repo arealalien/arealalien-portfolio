@@ -1,62 +1,22 @@
 import React from 'react';
-import { useEffect, useState } from "react";
-import { motion, AnimatePresence } from "framer-motion";
+import { Route, Routes } from "react-router-dom";
 import './css/main.css';
-
-// Components
-import Navbar from "./components/Navbar";
-import Banner from "./components/Banner";
-import Loader from "./components/Loader";
-import Projects from "./components/Projects";
-import Gallery from "./components/Gallery";
-import Timeline from "./components/Timeline";
-import Intro from "./components/Intro";
-import About from "./components/About";
-import Contact from "./components/Contact";
-import Footer from "./components/Footer";
+import Home from "./Home";
+import Projects from "./Projects";
+import Gallery from "./Gallery";
+import About from "./About";
+import Contact from "./Contact";
 
 function App() {
-    const [loading, setLoading] = useState(true);
-
-    useEffect(() => {
-        loading
-            ? document.querySelector("body").classList.add("loading")
-            : document.querySelector("body").classList.remove("loading");
-    }, [loading]);
 
     return (
-            <AnimatePresence>
-                <div className='grain' style={{ backgroundImage: `url(${process.env.PUBLIC_URL}/images/grain/noise.gif)` }}></div>
-                <div className='overlay'></div>
-                {loading ? (
-                    <motion.div key='loader'>
-                        <Loader setLoading={setLoading} />
-                    </motion.div>
-                ) : (
-                    <>
-                        <Navbar />
-                        <header>
-                            <Banner />
-                            {!loading && (
-                                <div className='transition-image final'>
-                                    <motion.img
-                                        transition={{ ease: [0.175, 0.285, 0.32, 0.9], duration: 1.6 }}
-                                        src={process.env.PUBLIC_URL + `/images/image-2.jpg`}
-                                        layoutId='main-image-1'
-                                    />
-                                </div>
-                            )}
-                        </header>
-                        <Intro />
-                        <About />
-                        <Projects />
-                        <Gallery />
-                        <Timeline />
-                        <Contact />
-                        <Footer />
-                    </>
-                )}
-            </AnimatePresence>
+        <Routes>
+            <Route path="/" element={<Home/>}/>
+            <Route path="/Projects" element={<Projects/>}/>
+            <Route path="/Gallery" element={<Gallery/>}/>
+            <Route path="/About" element={<About/>}/>
+            <Route path="/Contact" element={<Contact/>}/>
+        </Routes>
     );
 }
 
