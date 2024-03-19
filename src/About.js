@@ -12,7 +12,7 @@ function About() {
         <>
             <Navbar pagename="About" />
             <header>
-                
+
             </header>
             <AboutSec />
             <Footer />
