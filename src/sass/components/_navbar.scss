@@ -127,6 +127,9 @@
       gap: 5em;
       transition: all 1s cubic-bezier($transition-main, 1);
       @include flex-center();
+      @media (max-width: $layout-breakpoint-small) {
+        display: none;
+      }
 
       &-item {
         position: relative;
@@ -166,6 +169,56 @@
         }
       }
     }
+    &-list-mob {
+      display: none;
+      position: absolute;
+      gap: 1em;
+      transition: all 1s cubic-bezier($transition-main, 1);
+      justify-content: center;
+      flex-direction: column;
+      align-items: center;
+      @media (max-width: $layout-breakpoint-small) {
+        display: flex;
+      }
+
+      &-item {
+        position: relative;
+        @include flex-center();
+
+        &-link {
+          position: relative;
+          color: transparent;
+          -webkit-text-stroke: 1px hslac($white, 1);
+          font-size: calc($heading-medium + 2rem);
+          font-family: $font-secondary;
+          font-weight: 700;
+          text-decoration: none;
+          line-height: 1.2;
+          .outer {
+            top: 0; left: 0;
+            position: absolute;
+            color: hslac($white, 1);
+            transform: translateY(100%);
+            overflow: hidden;
+          }
+          .inner {
+            display: inline-block;
+            transform: translateY(-100%);
+          }
+          .outer, .inner {
+            font-size: calc($heading-medium + 2rem);
+            font-family: $font-secondary;
+            font-weight: 700;
+            line-height: 1.2;
+            pointer-events: none;
+            transition: transform .75s cubic-bezier($transition-main, 1);
+          }
+          &:hover .outer, &:hover .inner {
+            transform: none;
+          }
+        }
+      }
+    }
     &-center {
       bottom: -85%;
       width: 55vw; height: 53vw;
@@ -174,6 +227,9 @@
       background-color: hslac($background-superdark, .23);
       transition: transform 1s cubic-bezier($transition-main, 1);
       @include flex-center();
+      @media (max-width: $layout-breakpoint-small) {
+        display: none;
+      }
 
       &-pin {
         top: -2.5em;

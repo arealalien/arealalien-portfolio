@@ -35,7 +35,17 @@ const Navbar  = ({ pagename }) => {
         const mouseX = event.clientX;
         const menuCenterX = rect.left + rect.width / 2;
         const distanceFromCenter = mouseX - menuCenterX;
-        const maxShift = 500;
+
+        let maxShift = 500;
+        if (window.innerWidth <= 1660) {
+            maxShift = 600;
+        }
+        if (window.innerWidth <= 1440) {
+            maxShift = 700;
+        }
+        if (window.innerWidth <= 1220) {
+            maxShift = 900;
+        }
 
         const shiftAmount = (distanceFromCenter / menuCenterX) * maxShift * -1; // Reversed direction
         setShiftAmount(shiftAmount);
@@ -135,7 +145,7 @@ const Navbar  = ({ pagename }) => {
       </nav>
         <div className='menu' style={{ pointerEvents: menuVisible ? "auto" : "none" }}>
             <div className={`menu-inner ${menuVisible ? 'slide-down' : ''}`} onMouseMove={handleMouseMove} onMouseLeave={handleMouseLeave}>
-                <div className={`menu-inner-container ${menuVisible ? 'slide-down' : ''}`} >
+                <div className={`menu-inner-container ${menuVisible ? 'slide-down' : ''}`}>
                     <ul className='menu-inner-list'
                         style={{transform: `translateX(${shiftAmount}px) skewX(${skewAngle}deg)`}}
                         onMouseEnter={handleMouseEnterText} onMouseLeave={handleMouseLeaveText}>
@@ -161,6 +171,33 @@ const Navbar  = ({ pagename }) => {
                         </li>
                         <li className='menu-inner-list-item'>
                             <NavLink to="/contact" className='menu-inner-list-item-link'>Contact<span className="outer"
+                                                                                                      aria-hidden="true"><span
+                                className="inner">Contact</span></span></NavLink>
+                        </li>
+                    </ul>
+                    <ul className='menu-inner-list-mob'>
+                        <li className='menu-inner-list-mob-item'>
+                            <NavLink to="/" className='menu-inner-list-mob-item-link'>Home<span className="outer"
+                                                                                            aria-hidden="true"><span
+                                className="inner">Home</span></span></NavLink>
+                        </li>
+                        <li className='menu-inner-list-mob-item'>
+                            <NavLink to="/projects" className='menu-inner-list-mob-item-link'>Projects<span
+                                className="outer" aria-hidden="true"><span
+                                className="inner">Projects</span></span></NavLink>
+                        </li>
+                        <li className='menu-inner-list-mob-item'>
+                            <NavLink to="/gallery" className='menu-inner-list-mob-item-link'>Gallery<span className="outer"
+                                                                                                      aria-hidden="true"><span
+                                className="inner">Gallery</span></span></NavLink>
+                        </li>
+                        <li className='menu-inner-list-mob-item'>
+                            <NavLink to="/about" className='menu-inner-list-mob-item-link'>About<span className="outer"
+                                                                                                  aria-hidden="true"><span
+                                className="inner">About</span></span></NavLink>
+                        </li>
+                        <li className='menu-inner-list-mob-item'>
+                            <NavLink to="/contact" className='menu-inner-list-mob-item-link'>Contact<span className="outer"
                                                                                                       aria-hidden="true"><span
                                 className="inner">Contact</span></span></NavLink>
                         </li>
