@@ -1,6 +1,6 @@
 import React from "react";
 
-const Intro = () => {
+const IntroSec = () => {
     return (
         <section className='intro'>
             <div className='intro-inner component-grid view-width'>
@@ -10,4 +10,4 @@ const Intro = () => {
     );
 };
 
-export default Intro;
+export default IntroSec;

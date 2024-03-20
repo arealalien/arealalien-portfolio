@@ -4,6 +4,7 @@ import './css/main.css';
 // Components
 import Navbar from "./components/Navbar";
 import ProjectsSec from "./components/ProjectsSec";
+import TimelineSec from "./components/TimelineSec";
 import Footer from "./components/Footer";
 
 function Projects() {
@@ -14,6 +15,7 @@ function Projects() {
 
                 </header>
                 <ProjectsSec />
+                <TimelineSec />
                 <Footer />
             </>
     );

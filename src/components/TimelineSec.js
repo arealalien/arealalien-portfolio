@@ -2,7 +2,7 @@ import React, { useState, useEffect, useRef } from "react";
 
 import Image from "./Image";
 
-const Timeline = () => {
+const TimelineSec = () => {
     const [scrollProgress, setScrollProgress] = useState(0);
     const [rotateAngle, setRotateAngle] = useState(0);
     const [buttonPosition, setButtonPosition] = useState({ x: 0, y: 0 });
@@ -261,4 +261,4 @@ const Timeline = () => {
     );
 };
 
-export default Timeline;
+export default TimelineSec;

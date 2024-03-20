@@ -9,8 +9,8 @@ import Banner from "./components/Banner";
 import Loader from "./components/Loader";
 import ProjectsSec from "./components/ProjectsSec";
 import GallerySec from "./components/GallerySec";
-import Timeline from "./components/Timeline";
-import Intro from "./components/Intro";
+import TimelineSec from "./components/TimelineSec";
+import IntroSec from "./components/IntroSec";
 import AboutSec from "./components/AboutSec";
 import ContactSec from "./components/ContactSec";
 import Footer from "./components/Footer";
@@ -47,11 +47,11 @@ function Home() {
                                 </div>
                             )}
                         </header>
-                        <Intro />
+                        <IntroSec />
                         <AboutSec />
                         <ProjectsSec />
                         <GallerySec />
-                        <Timeline />
+                        <TimelineSec />
                         <ContactSec />
                         <Footer />
                     </>
