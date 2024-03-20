@@ -102,7 +102,7 @@ const Timeline = () => {
                                 <p className='timeline-inner-grid-item-content-date'>2024.03.07</p>
                                 <div className='timeline-inner-grid-item-content-divider'></div>
                                 <div className='timeline-inner-grid-item-content-title'>
-                                    <h3 className='timeline-inner-grid-item-content-title-text'>This is a title</h3>
+                                    <h3 className='timeline-inner-grid-item-content-title-text'>This is a title<span className="outer" aria-hidden="true"><span className="inner">This is a title</span></span></h3>
                                 </div>
                             </div>
                         </div>
@@ -123,8 +123,7 @@ const Timeline = () => {
                                 <p className='timeline-inner-grid-item-content-date'>2024.01.24</p>
                                 <div className='timeline-inner-grid-item-content-divider'></div>
                                 <div className='timeline-inner-grid-item-content-title'>
-                                    <h3 className='timeline-inner-grid-item-content-title-text'>This is a longer
-                                        title</h3>
+                                    <h3 className='timeline-inner-grid-item-content-title-text'>This is a longer title<span className="outer" aria-hidden="true"><span className="inner">This is a longer title</span></span></h3>
                                 </div>
                             </div>
                         </div>
@@ -145,8 +144,7 @@ const Timeline = () => {
                                 <p className='timeline-inner-grid-item-content-date'>2023.11.15</p>
                                 <div className='timeline-inner-grid-item-content-divider'></div>
                                 <div className='timeline-inner-grid-item-content-title'>
-                                    <h3 className='timeline-inner-grid-item-content-title-text'>This is a much, much
-                                        longer title</h3>
+                                    <h3 className='timeline-inner-grid-item-content-title-text'>This is a much, much longer title<span className="outer" aria-hidden="true"><span className="inner">This is a much, much longer title</span></span></h3>
                                 </div>
                             </div>
                         </div>
@@ -167,8 +165,7 @@ const Timeline = () => {
                                 <p className='timeline-inner-grid-item-content-date'>2023.10.28</p>
                                 <div className='timeline-inner-grid-item-content-divider'></div>
                                 <div className='timeline-inner-grid-item-content-title'>
-                                    <h3 className='timeline-inner-grid-item-content-title-text'>This title is really
-                                        quite long</h3>
+                                    <h3 className='timeline-inner-grid-item-content-title-text'>This title is really quite long<span className="outer" aria-hidden="true"><span className="inner">This title is really quite long</span></span></h3>
                                 </div>
                             </div>
                         </div>
@@ -189,7 +186,7 @@ const Timeline = () => {
                                 <p className='timeline-inner-grid-item-content-date'>2023.03.07</p>
                                 <div className='timeline-inner-grid-item-content-divider'></div>
                                 <div className='timeline-inner-grid-item-content-title'>
-                                    <h3 className='timeline-inner-grid-item-content-title-text'>This is a title</h3>
+                                    <h3 className='timeline-inner-grid-item-content-title-text'>This is a title<span className="outer" aria-hidden="true"><span className="inner">This is a title</span></span></h3>
                                 </div>
                             </div>
                         </div>
@@ -210,8 +207,7 @@ const Timeline = () => {
                                 <p className='timeline-inner-grid-item-content-date'>2023.01.24</p>
                                 <div className='timeline-inner-grid-item-content-divider'></div>
                                 <div className='timeline-inner-grid-item-content-title'>
-                                    <h3 className='timeline-inner-grid-item-content-title-text'>This is a longer
-                                        title</h3>
+                                    <h3 className='timeline-inner-grid-item-content-title-text'>This is a longer title<span className="outer" aria-hidden="true"><span className="inner">This is a longer title</span></span></h3>
                                 </div>
                             </div>
                         </div>
@@ -232,13 +228,12 @@ const Timeline = () => {
                                 <p className='timeline-inner-grid-item-content-date'>2022.11.15</p>
                                 <div className='timeline-inner-grid-item-content-divider'></div>
                                 <div className='timeline-inner-grid-item-content-title'>
-                                    <h3 className='timeline-inner-grid-item-content-title-text'>This is a much, much
-                                        longer title</h3>
-                                </div>
+                                    <h3 className='timeline-inner-grid-item-content-title-text'>This is a much, much longer title<span className="outer" aria-hidden="true"><span className="inner">This is a much, much longer title</span></span></h3>
                             </div>
                         </div>
-                        <div className='timeline-inner-grid-item'
-                             onMouseMove={handleMouseMove}
+                    </div>
+                    <div className='timeline-inner-grid-item'
+                         onMouseMove={handleMouseMove}
                              onMouseEnter={() => handleMouseEnter('image-17')}
                              onMouseLeave={handleMouseLeave}>
                             <div className='timeline-inner-grid-item-content'>
@@ -254,8 +249,7 @@ const Timeline = () => {
                                 <p className='timeline-inner-grid-item-content-date'>2022.10.28</p>
                                 <div className='timeline-inner-grid-item-content-divider'></div>
                                 <div className='timeline-inner-grid-item-content-title'>
-                                    <h3 className='timeline-inner-grid-item-content-title-text'>This title is really
-                                        quite long</h3>
+                                    <h3 className='timeline-inner-grid-item-content-title-text'>This title is really quite long<span className="outer" aria-hidden="true"><span className="inner">This title is really quite long</span></span></h3>
                                 </div>
                             </div>
                         </div>

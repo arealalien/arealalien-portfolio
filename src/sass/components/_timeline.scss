@@ -15,6 +15,9 @@
         &:last-child {
           border-bottom: 1px solid hslac($white, .1);
         }
+        &:hover .outer, &:hover .inner {
+          transform: none;
+        }
 
         &-content {
           padding: 6em 0;
@@ -27,6 +30,7 @@
             top: calc(-50% + -8em); left: calc(50% + 2em);
             width: 25em; height: 25em;
             position: absolute;
+            background-color: hslac($background-dark, 1);
             border-radius: 50%;
             pointer-events: none;
             user-select: none;
@@ -54,8 +58,26 @@
             overflow: hidden;
             @include flex-left();
             &-text {
+              position: relative;
               color: transparent;
+              font-size: $heading-medium;
               -webkit-text-stroke: 1px hslac($white, 1);
+              .outer {
+                top: 0; left: 0;
+                position: absolute;
+                color: hslac($white, 1);
+                transform: translateY(100%);
+                overflow: hidden;
+              }
+              .inner {
+                display: inline-block;
+                transform: translateY(-100%);
+              }
+              .outer, .inner {
+                font-size: $heading-medium;
+                pointer-events: none;
+                transition: transform .75s cubic-bezier($transition-main, 1);
+              }
             }
           }
           &-divider {
