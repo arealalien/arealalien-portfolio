@@ -59,12 +59,12 @@ const Projects = () => {
 
                         <div className='projects-inner-grid-item pigif'>
                             <div className='projects-inner-grid-item-image'>
-                                <img alt='' src={process.env.PUBLIC_URL + `/images/gallery/image-1.jpg`}/>
+                                <img alt='' src={process.env.PUBLIC_URL + `/images/projects/xcraft/banner.jpg`}/>
                             </div>
                             <div className='projects-inner-grid-item-info'>
-                                <p className='projects-inner-grid-item-info-tag'>Website</p>
+                                <p className='projects-inner-grid-item-info-tag'>Website / Game Server</p>
                                 <div className='projects-inner-grid-item-info-bottom'>
-                                    <h3 className='projects-inner-grid-item-info-bottom-title'>Project Name</h3>
+                                    <h3 className='projects-inner-grid-item-info-bottom-title'>xCraft</h3>
                                     <button className='projects-inner-grid-item-info-bottom-button'>Learn more</button>
                                 </div>
                             </div>
@@ -73,24 +73,22 @@ const Projects = () => {
                             <div className='projects-inner-grid-item-info'>
                                 <p className='projects-inner-grid-item-info-tag'>Website</p>
                                 <div className='projects-inner-grid-item-info-bottom'>
-                                    <h3 className='projects-inner-grid-item-info-bottom-title'>A Much Longer Project
-                                        Name</h3>
+                                    <h3 className='projects-inner-grid-item-info-bottom-title'>YME - Fashion and Streetwear</h3>
                                     <button className='projects-inner-grid-item-info-bottom-button'>Learn more</button>
                                 </div>
                             </div>
                             <div className='projects-inner-grid-item-image'>
-                                <img alt='' src={process.env.PUBLIC_URL + `/images/gallery/image-12.jpg`}/>
+                                <img alt='' src={process.env.PUBLIC_URL + `/images/projects/yme/showcase.jpg`}/>
                             </div>
                         </div>
                         <div className='projects-inner-grid-item pigif'>
                             <div className='projects-inner-grid-item-image'>
-                                <img alt='' src={process.env.PUBLIC_URL + `/images/gallery/image-20.jpg`}/>
+                                <img alt='' src={process.env.PUBLIC_URL + `/images/projects/gg/showcase.jpg`}/>
                             </div>
                             <div className='projects-inner-grid-item-info'>
-                                <p className='projects-inner-grid-item-info-tag'>Website</p>
+                                <p className='projects-inner-grid-item-info-tag'>Poster</p>
                                 <div className='projects-inner-grid-item-info-bottom'>
-                                    <h3 className='projects-inner-grid-item-info-bottom-title'>A Much Longer Project
-                                        Name</h3>
+                                    <h3 className='projects-inner-grid-item-info-bottom-title'>Lanmine 36 - Grøss og Gru</h3>
                                     <button className='projects-inner-grid-item-info-bottom-button'>Learn more</button>
                                 </div>
                             </div>

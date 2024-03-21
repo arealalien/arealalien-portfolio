@@ -87,90 +87,6 @@ const TimelineSec = () => {
 
                         <div className='timeline-inner-grid-item'
                              onMouseMove={handleMouseMove}
-                             onMouseEnter={() => handleMouseEnter('image-12')}
-                             onMouseLeave={handleMouseLeave}>
-                            <div className='timeline-inner-grid-item-content'>
-                                <div className='timeline-inner-grid-item-content-image'
-                                     style={{
-                                         transform: `translate(${buttonPosition.x}px, ${buttonPosition.y}px) skew(${buttonPosition.skewX}deg, ${buttonPosition.skewY}deg) scale(${hoveredItem === 'image-12' ? "1, 1" : "0, 0"})`,
-                                         opacity: hoveredItem === 'image-12' ? 1 : 0,
-                                         transition: 'transform 1s cubic-bezier(.175, .685, .32, 1), opacity .3s cubic-bezier(.175, .285, .32, 1), width .2s cubic-bezier(.175, .285, .32, 1)'
-                                     }}
-                                >
-                                    <Image src={process.env.PUBLIC_URL + `/images/gallery/image-12.webp`} fallback={process.env.PUBLIC_URL + `/images/gallery/image-12.jpg`} />
-                                </div>
-                                <p className='timeline-inner-grid-item-content-date'>2024.03.07</p>
-                                <div className='timeline-inner-grid-item-content-divider'></div>
-                                <div className='timeline-inner-grid-item-content-title'>
-                                    <h3 className='timeline-inner-grid-item-content-title-text'>This is a title<span className="outer" aria-hidden="true"><span className="inner">This is a title</span></span></h3>
-                                </div>
-                            </div>
-                        </div>
-                        <div className='timeline-inner-grid-item'
-                             onMouseMove={handleMouseMove}
-                             onMouseEnter={() => handleMouseEnter('image-1')}
-                             onMouseLeave={handleMouseLeave}>
-                            <div className='timeline-inner-grid-item-content'>
-                                <div className='timeline-inner-grid-item-content-image'
-                                     style={{
-                                         transform: `translate(${buttonPosition.x}px, ${buttonPosition.y}px) skew(${buttonPosition.skewX}deg, ${buttonPosition.skewY}deg) scale(${hoveredItem === 'image-1' ? "1, 1" : "0, 0"})`,
-                                         opacity: hoveredItem === 'image-1' ? 1 : 0,
-                                         transition: 'transform 1s cubic-bezier(.175, .685, .32, 1), opacity .3s cubic-bezier(.175, .285, .32, 1), width .2s cubic-bezier(.175, .285, .32, 1)'
-                                     }}
-                                >
-                                    <Image src={process.env.PUBLIC_URL + `/images/gallery/image-1.webp`} fallback={process.env.PUBLIC_URL + `/images/gallery/image-1.jpg`} />
-                                </div>
-                                <p className='timeline-inner-grid-item-content-date'>2024.01.24</p>
-                                <div className='timeline-inner-grid-item-content-divider'></div>
-                                <div className='timeline-inner-grid-item-content-title'>
-                                    <h3 className='timeline-inner-grid-item-content-title-text'>This is a longer title<span className="outer" aria-hidden="true"><span className="inner">This is a longer title</span></span></h3>
-                                </div>
-                            </div>
-                        </div>
-                        <div className='timeline-inner-grid-item'
-                             onMouseMove={handleMouseMove}
-                             onMouseEnter={() => handleMouseEnter('image-20')}
-                             onMouseLeave={handleMouseLeave}>
-                            <div className='timeline-inner-grid-item-content'>
-                                <div className='timeline-inner-grid-item-content-image'
-                                     style={{
-                                         transform: `translate(${buttonPosition.x}px, ${buttonPosition.y}px) skew(${buttonPosition.skewX}deg, ${buttonPosition.skewY}deg) scale(${hoveredItem === 'image-20' ? "1, 1" : "0, 0"})`,
-                                         opacity: hoveredItem === 'image-20' ? 1 : 0,
-                                         transition: 'transform 1s cubic-bezier(.175, .685, .32, 1), opacity .3s cubic-bezier(.175, .285, .32, 1), width .2s cubic-bezier(.175, .285, .32, 1)'
-                                     }}
-                                >
-                                    <Image src={process.env.PUBLIC_URL + `/images/gallery/image-20.webp`} fallback={process.env.PUBLIC_URL + `/images/gallery/image-20.jpg`} />
-                                </div>
-                                <p className='timeline-inner-grid-item-content-date'>2023.11.15</p>
-                                <div className='timeline-inner-grid-item-content-divider'></div>
-                                <div className='timeline-inner-grid-item-content-title'>
-                                    <h3 className='timeline-inner-grid-item-content-title-text'>This is a much, much longer title<span className="outer" aria-hidden="true"><span className="inner">This is a much, much longer title</span></span></h3>
-                                </div>
-                            </div>
-                        </div>
-                        <div className='timeline-inner-grid-item'
-                             onMouseMove={handleMouseMove}
-                             onMouseEnter={() => handleMouseEnter('image-28')}
-                             onMouseLeave={handleMouseLeave}>
-                            <div className='timeline-inner-grid-item-content'>
-                                <div className='timeline-inner-grid-item-content-image'
-                                     style={{
-                                         transform: `translate(${buttonPosition.x}px, ${buttonPosition.y}px) skew(${buttonPosition.skewX}deg, ${buttonPosition.skewY}deg) scale(${hoveredItem === 'image-28' ? "1, 1" : "0, 0"})`,
-                                         opacity: hoveredItem === 'image-28' ? 1 : 0,
-                                         transition: 'transform 1s cubic-bezier(.175, .685, .32, 1), opacity .3s cubic-bezier(.175, .285, .32, 1), width .2s cubic-bezier(.175, .285, .32, 1)'
-                                     }}
-                                >
-                                    <Image src={process.env.PUBLIC_URL + `/images/gallery/image-28.webp`} fallback={process.env.PUBLIC_URL + `/images/gallery/image-28.jpg`}/>
-                                </div>
-                                <p className='timeline-inner-grid-item-content-date'>2023.10.28</p>
-                                <div className='timeline-inner-grid-item-content-divider'></div>
-                                <div className='timeline-inner-grid-item-content-title'>
-                                    <h3 className='timeline-inner-grid-item-content-title-text'>This title is really quite long<span className="outer" aria-hidden="true"><span className="inner">This title is really quite long</span></span></h3>
-                                </div>
-                            </div>
-                        </div>
-                        <div className='timeline-inner-grid-item'
-                             onMouseMove={handleMouseMove}
                              onMouseEnter={() => handleMouseEnter('image-15')}
                              onMouseLeave={handleMouseLeave}>
                             <div className='timeline-inner-grid-item-content'>
@@ -181,33 +97,16 @@ const TimelineSec = () => {
                                          transition: 'transform 1s cubic-bezier(.175, .685, .32, 1), opacity .3s cubic-bezier(.175, .285, .32, 1), width .2s cubic-bezier(.175, .285, .32, 1)'
                                      }}
                                 >
-                                    <Image src={process.env.PUBLIC_URL + `/images/gallery/image-15.webp`} fallback={process.env.PUBLIC_URL + `/images/gallery/image-15.jpg`} />
+                                    <Image src={process.env.PUBLIC_URL + `/images/gallery/image-15.webp`}
+                                           fallback={process.env.PUBLIC_URL + `/images/gallery/image-15.jpg`}/>
                                 </div>
-                                <p className='timeline-inner-grid-item-content-date'>2023.03.07</p>
+                                <p className='timeline-inner-grid-item-content-date'>15.03.2024</p>
                                 <div className='timeline-inner-grid-item-content-divider'></div>
                                 <div className='timeline-inner-grid-item-content-title'>
-                                    <h3 className='timeline-inner-grid-item-content-title-text'>This is a title<span className="outer" aria-hidden="true"><span className="inner">This is a title</span></span></h3>
-                                </div>
-                            </div>
-                        </div>
-                        <div className='timeline-inner-grid-item'
-                             onMouseMove={handleMouseMove}
-                             onMouseEnter={() => handleMouseEnter('image-22')}
-                             onMouseLeave={handleMouseLeave}>
-                            <div className='timeline-inner-grid-item-content'>
-                                <div className='timeline-inner-grid-item-content-image'
-                                     style={{
-                                         transform: `translate(${buttonPosition.x}px, ${buttonPosition.y}px) skew(${buttonPosition.skewX}deg, ${buttonPosition.skewY}deg) scale(${hoveredItem === 'image-22' ? "1, 1" : "0, 0"})`,
-                                         opacity: hoveredItem === 'image-22' ? 1 : 0,
-                                         transition: 'transform 1s cubic-bezier(.175, .685, .32, 1), opacity .3s cubic-bezier(.175, .285, .32, 1), width .2s cubic-bezier(.175, .285, .32, 1)'
-                                     }}
-                                >
-                                    <Image src={process.env.PUBLIC_URL + `/images/gallery/image-22.webp`} fallback={process.env.PUBLIC_URL + `/images/gallery/image-22.jpg`} />
-                                </div>
-                                <p className='timeline-inner-grid-item-content-date'>2023.01.24</p>
-                                <div className='timeline-inner-grid-item-content-divider'></div>
-                                <div className='timeline-inner-grid-item-content-title'>
-                                    <h3 className='timeline-inner-grid-item-content-title-text'>This is a longer title<span className="outer" aria-hidden="true"><span className="inner">This is a longer title</span></span></h3>
+                                    <h3 className='timeline-inner-grid-item-content-title-text'>Animal Photoshoot<span
+                                        className="outer" aria-hidden="true"><span
+                                        className="inner">Animal Photoshoot</span></span>
+                                    </h3>
                                 </div>
                             </div>
                         </div>
@@ -223,33 +122,88 @@ const TimelineSec = () => {
                                          transition: 'transform 1s cubic-bezier(.175, .685, .32, 1), opacity .3s cubic-bezier(.175, .285, .32, 1), width .2s cubic-bezier(.175, .285, .32, 1)'
                                      }}
                                 >
-                                    <Image src={process.env.PUBLIC_URL + `/images/gallery/image-27.webp`} fallback={process.env.PUBLIC_URL + `/images/gallery/image-27.jpg`} />
+                                    <Image src={process.env.PUBLIC_URL + `/images/gallery/image-27.webp`}
+                                           fallback={process.env.PUBLIC_URL + `/images/gallery/image-27.jpg`}/>
                                 </div>
-                                <p className='timeline-inner-grid-item-content-date'>2022.11.15</p>
+                                <p className='timeline-inner-grid-item-content-date'>22.01.2024</p>
                                 <div className='timeline-inner-grid-item-content-divider'></div>
                                 <div className='timeline-inner-grid-item-content-title'>
-                                    <h3 className='timeline-inner-grid-item-content-title-text'>This is a much, much longer title<span className="outer" aria-hidden="true"><span className="inner">This is a much, much longer title</span></span></h3>
+                                    <h3 className='timeline-inner-grid-item-content-title-text'>Winter Photoshoot<span
+                                        className="outer" aria-hidden="true"><span
+                                        className="inner">Winter Photoshoot</span></span>
+                                    </h3>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div className='timeline-inner-grid-item'
-                         onMouseMove={handleMouseMove}
-                             onMouseEnter={() => handleMouseEnter('image-17')}
+                        <div className='timeline-inner-grid-item'
+                             onMouseMove={handleMouseMove}
+                             onMouseEnter={() => handleMouseEnter('timeline-yme')}
                              onMouseLeave={handleMouseLeave}>
                             <div className='timeline-inner-grid-item-content'>
                                 <div className='timeline-inner-grid-item-content-image'
                                      style={{
-                                         transform: `translate(${buttonPosition.x}px, ${buttonPosition.y}px) skew(${buttonPosition.skewX}deg, ${buttonPosition.skewY}deg) scale(${hoveredItem === 'image-17' ? "1, 1" : "0, 0"})`,
-                                         opacity: hoveredItem === 'image-17' ? 1 : 0,
+                                         transform: `translate(${buttonPosition.x}px, ${buttonPosition.y}px) skew(${buttonPosition.skewX}deg, ${buttonPosition.skewY}deg) scale(${hoveredItem === 'timeline-yme' ? "1, 1" : "0, 0"})`,
+                                         opacity: hoveredItem === 'timeline-yme' ? 1 : 0,
                                          transition: 'transform 1s cubic-bezier(.175, .685, .32, 1), opacity .3s cubic-bezier(.175, .285, .32, 1), width .2s cubic-bezier(.175, .285, .32, 1)'
                                      }}
                                 >
-                                    <Image src={process.env.PUBLIC_URL + `/images/gallery/image-17.webp`} fallback={process.env.PUBLIC_URL + `/images/gallery/image-17.jpg`} />
+                                    <Image src={process.env.PUBLIC_URL + `/images/projects/yme/timeline-yme.jpg`}
+                                           fallback={process.env.PUBLIC_URL + `/images/projects/yme/timeline-yme.jpg`}/>
                                 </div>
-                                <p className='timeline-inner-grid-item-content-date'>2022.10.28</p>
+                                <p className='timeline-inner-grid-item-content-date'>02.12.2023</p>
                                 <div className='timeline-inner-grid-item-content-divider'></div>
                                 <div className='timeline-inner-grid-item-content-title'>
-                                    <h3 className='timeline-inner-grid-item-content-title-text'>This title is really quite long<span className="outer" aria-hidden="true"><span className="inner">This title is really quite long</span></span></h3>
+                                    <h3 className='timeline-inner-grid-item-content-title-text'>YME - Fashion and
+                                        Streetwear<span className="outer" aria-hidden="true"><span className="inner">YME - Fashion and Streetwear</span></span>
+                                    </h3>
+                                </div>
+                            </div>
+                        </div>
+                        <div className='timeline-inner-grid-item'
+                             onMouseMove={handleMouseMove}
+                             onMouseEnter={() => handleMouseEnter('image-1')}
+                             onMouseLeave={handleMouseLeave}>
+                            <div className='timeline-inner-grid-item-content'>
+                                <div className='timeline-inner-grid-item-content-image'
+                                     style={{
+                                         transform: `translate(${buttonPosition.x}px, ${buttonPosition.y}px) skew(${buttonPosition.skewX}deg, ${buttonPosition.skewY}deg) scale(${hoveredItem === 'image-1' ? "1, 1" : "0, 0"})`,
+                                         opacity: hoveredItem === 'image-1' ? 1 : 0,
+                                         transition: 'transform 1s cubic-bezier(.175, .685, .32, 1), opacity .3s cubic-bezier(.175, .285, .32, 1), width .2s cubic-bezier(.175, .285, .32, 1)'
+                                     }}
+                                >
+                                    <Image src={process.env.PUBLIC_URL + `/images/projects/gg/showcase.jpg`}
+                                           fallback={process.env.PUBLIC_URL + `/images/projects/gg/showcase.jpg`}/>
+                                </div>
+                                <p className='timeline-inner-grid-item-content-date'>12.07.2023</p>
+                                <div className='timeline-inner-grid-item-content-divider'></div>
+                                <div className='timeline-inner-grid-item-content-title'>
+                                    <h3 className='timeline-inner-grid-item-content-title-text'>Lanmine - Grøss og
+                                        Gru<span className="outer" aria-hidden="true"><span className="inner">Lanmine - Grøss og Gru</span></span>
+                                    </h3>
+                                </div>
+                            </div>
+                        </div>
+                        <div className='timeline-inner-grid-item'
+                             onMouseMove={handleMouseMove}
+                             onMouseEnter={() => handleMouseEnter('banner')}
+                             onMouseLeave={handleMouseLeave}>
+                            <div className='timeline-inner-grid-item-content'>
+                                <div className='timeline-inner-grid-item-content-image'
+                                     style={{
+                                         transform: `translate(${buttonPosition.x}px, ${buttonPosition.y}px) skew(${buttonPosition.skewX}deg, ${buttonPosition.skewY}deg) scale(${hoveredItem === 'banner' ? "1, 1" : "0, 0"})`,
+                                         opacity: hoveredItem === 'banner' ? 1 : 0,
+                                         transition: 'transform 1s cubic-bezier(.175, .685, .32, 1), opacity .3s cubic-bezier(.175, .285, .32, 1), width .2s cubic-bezier(.175, .285, .32, 1)'
+                                     }}
+                                >
+                                    <Image src={process.env.PUBLIC_URL + `/images/projects/xcraft/banner.jpg`}
+                                           fallback={process.env.PUBLIC_URL + `/images/projects/xcraft/banner.jpg`}/>
+                                </div>
+                                <p className='timeline-inner-grid-item-content-date'>02.09.2020</p>
+                                <div className='timeline-inner-grid-item-content-divider'></div>
+                                <div className='timeline-inner-grid-item-content-title'>
+                                    <h3 className='timeline-inner-grid-item-content-title-text'>xCraft<span
+                                        className="outer" aria-hidden="true"><span
+                                        className="inner">xCraft</span></span></h3>
                                 </div>
                             </div>
                         </div>

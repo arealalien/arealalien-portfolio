@@ -8,7 +8,6 @@ import About from "./About";
 import Contact from "./Contact";
 
 function App() {
-
     return (
         <Routes>
             <Route path="/" element={<Home/>}/>

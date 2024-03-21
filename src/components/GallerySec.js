@@ -9,7 +9,7 @@ const Gallery = () => {
                         <h2 className='component-grid-title'>/Gallery</h2>
                     </div>
                 </div>
-                <div className='component-grid-right'>
+                <div className='component-grid-right view-width'>
                     <div className='gallery-inner-showcase'>
                         <div className='gallery-inner-showcase-item'>
                             <img className='gallery-inner-showcase-item-background gis-wide'
@@ -22,18 +22,6 @@ const Gallery = () => {
                         <div className='gallery-inner-showcase-item'>
                             <img className='gallery-inner-showcase-item-background gis-wide'
                                  src={process.env.PUBLIC_URL + `/images/gallery/image-1.jpg`}/>
-                        </div>
-                        <div className='gallery-inner-showcase-item'>
-                            <img className='gallery-inner-showcase-item-background gis-wide'
-                                 src={process.env.PUBLIC_URL + `/images/gallery/image-29.jpg`}/>
-                        </div>
-                        <div className='gallery-inner-showcase-item'>
-                            <img className='gallery-inner-showcase-item-background gis-wide'
-                                 src={process.env.PUBLIC_URL + `/images/gallery/image-20.jpg`}/>
-                        </div>
-                        <div className='gallery-inner-showcase-item'>
-                            <img className='gallery-inner-showcase-item-background gis-wide'
-                                 src={process.env.PUBLIC_URL + `/images/gallery/image-4.jpg`}/>
                         </div>
                     </div>
                 </div>
