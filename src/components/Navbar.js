@@ -104,7 +104,7 @@ const Navbar  = ({ pagename }) => {
           <button className='navbar-inner-left-button'>My reel</button>
         </div>
         <div className='navbar-inner-center'>
-          <div className='navbar-inner-center-logo'>
+          <NavLink to="/" className='navbar-inner-center-logo'>
             <svg xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 1438.88 1819.54">
               <title>icon-white</title>
               <polygon className="cls-1"
@@ -115,7 +115,7 @@ const Navbar  = ({ pagename }) => {
               <polygon className="cls-1" points="783.64 1663.28 1123.78 1471.02 1438.88 1663.28 783.64 1663.28"/>
               <path className="cls-1" d="M392.54,1676.49" transform="translate(-280.56 -90.23)"/>
             </svg>
-          </div>
+          </NavLink>
         </div>
           <div className='navbar-inner-right'>
               <p className='navbar-inner-right-title'>{pagename}</p>

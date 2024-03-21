@@ -9,12 +9,14 @@ import Footer from "./components/Footer";
 function Gallery() {
     return (
         <>
-            <Navbar />
+            <div className='grain'
+                 style={{backgroundImage: `url(${process.env.PUBLIC_URL}/images/grain/noise.gif)`}}></div>
+            <Navbar/>
             <header>
 
             </header>
-            <GallerySec />
-            <Footer />
+            <GallerySec/>
+            <Footer/>
         </>
     );
 }

@@ -3,10 +3,10 @@ import './css/main.css';
 
 // Components
 import Navbar from "./components/Navbar";
-import ContactSec from "./components/ContactSec";
+import BlogSec from "./components/BlogSec";
 import Footer from "./components/Footer";
 
-function Contact() {
+function Blog() {
     return (
         <>
             <div className='grain'
@@ -15,10 +15,10 @@ function Contact() {
             <header>
 
             </header>
-            <ContactSec/>
+            <BlogSec/>
             <Footer/>
         </>
     );
 }
 
-export default Contact;
+export default Blog;

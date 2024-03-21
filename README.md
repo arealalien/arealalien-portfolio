@@ -4,6 +4,8 @@
 
 #### Most important
 
+!! NOTE !! I want blog page to have a unique transition:: (transition between any page to that one, scribble text and something similar to a notebook / journal design ish)
+
 - [x] ~~Start project~~ <span>✨</span>
 - [x] ~~Change CSS code to be unanimous~~ <span style="color:#ff213b">**✦**</span>
 - [x] ~~Fix naming schemes~~ <span style="color:#ff213b">**✦**</span>

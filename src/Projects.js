@@ -9,15 +9,17 @@ import Footer from "./components/Footer";
 
 function Projects() {
     return (
-            <>
-                <Navbar pagename="Projects" />
-                <header>
+        <>
+            <div className='grain'
+                 style={{backgroundImage: `url(${process.env.PUBLIC_URL}/images/grain/noise.gif)`}}></div>
+            <Navbar pagename="Projects"/>
+            <header>
 
-                </header>
-                <ProjectsSec />
-                <TimelineSec />
-                <Footer />
-            </>
+            </header>
+            <ProjectsSec/>
+            <TimelineSec/>
+            <Footer/>
+        </>
     );
 }
 

@@ -10,12 +10,14 @@ function About() {
 
     return (
         <>
-            <Navbar pagename="About" />
+            <div className='grain'
+                 style={{backgroundImage: `url(${process.env.PUBLIC_URL}/images/grain/noise.gif)`}}></div>
+            <Navbar pagename="About"/>
             <header>
 
             </header>
-            <AboutSec />
-            <Footer />
+            <AboutSec/>
+            <Footer/>
         </>
     );
 }

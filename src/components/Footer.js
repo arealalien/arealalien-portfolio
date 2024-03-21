@@ -1,4 +1,5 @@
 import React, { useEffect } from "react";
+import { NavLink } from "react-router-dom";
 
 const Footer = () => {
 
@@ -41,42 +42,42 @@ const Footer = () => {
             <div className='footer-top'>
                 <div className='footer-top-inner'>
                     <ul className='footer-top-list'>
-                        <li className='footer-top-list-item'>
+                        <NavLink to="/" className='footer-top-list-item'>
                             <p className='footer-top-list-item-text'>Home</p>
                             <div className='footer-top-list-item-bar'>
                                 <div className='footer-top-list-item-bar-fill'></div>
                             </div>
-                        </li>
-                        <li className='footer-top-list-item'>
+                        </NavLink>
+                        <NavLink to="/projects" className='footer-top-list-item'>
                             <p className='footer-top-list-item-text'>Projects</p>
                             <div className='footer-top-list-item-bar'>
                                 <div className='footer-top-list-item-bar-fill'></div>
                             </div>
-                        </li>
-                        <li className='footer-top-list-item'>
+                        </NavLink>
+                        <NavLink to="/gallery" className='footer-top-list-item'>
                             <p className='footer-top-list-item-text'>Gallery</p>
                             <div className='footer-top-list-item-bar'>
                                 <div className='footer-top-list-item-bar-fill'></div>
                             </div>
-                        </li>
-                        <li className='footer-top-list-item'>
-                            <p className='footer-top-list-item-text'>CV</p>
+                        </NavLink>
+                        <NavLink to="/blog" className='footer-top-list-item'>
+                            <p className='footer-top-list-item-text'>Blog</p>
                             <div className='footer-top-list-item-bar'>
                                 <div className='footer-top-list-item-bar-fill'></div>
                             </div>
-                        </li>
-                        <li className='footer-top-list-item'>
+                        </NavLink>
+                        <NavLink to="/about" className='footer-top-list-item'>
                             <p className='footer-top-list-item-text'>About</p>
                             <div className='footer-top-list-item-bar'>
                                 <div className='footer-top-list-item-bar-fill'></div>
                             </div>
-                        </li>
-                        <li className='footer-top-list-item'>
+                        </NavLink>
+                        <NavLink to="/contact" className='footer-top-list-item'>
                             <p className='footer-top-list-item-text'>Contact</p>
                             <div className='footer-top-list-item-bar'>
                                 <div className='footer-top-list-item-bar-fill'></div>
                             </div>
-                        </li>
+                        </NavLink>
                     </ul>
                 </div>
             </div>
