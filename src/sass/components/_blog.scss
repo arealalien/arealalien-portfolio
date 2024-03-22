@@ -7,10 +7,9 @@
 
   &-inner {
     &-post {
-      padding: 6em;
+
       width: 100%;
       display: grid;
-      background-color: hslac($background-dark, 1);
       grid-template-columns: 100%;
       grid-gap: 2em;
       &-images {

@@ -36,28 +36,27 @@ const Navbar  = ({ pagename }) => {
         const menuCenterX = rect.left + rect.width / 2;
         const distanceFromCenter = mouseX - menuCenterX;
 
-        let maxShift = 500;
-        if (window.innerWidth <= 1660) {
-            maxShift = 600;
-        }
-        if (window.innerWidth <= 1440) {
-            maxShift = 700;
-        }
+        const menuWidth = rect.width;
+        const menuToWindowWidthRatio = menuWidth / window.innerWidth;
+
+        let baseMaxShift = 500;
+        let maxShift = (baseMaxShift * (1 + menuToWindowWidthRatio)) - 300;
+
         if (window.innerWidth <= 1220) {
-            maxShift = 900;
+            maxShift += 200;
         }
 
-        const shiftAmount = (distanceFromCenter / menuCenterX) * maxShift * -1; // Reversed direction
+        const shiftAmount = (distanceFromCenter / menuCenterX) * maxShift * -1;
         setShiftAmount(shiftAmount);
 
         const maxSkewAngle = 80;
         const skewFactor = 0.5;
-        const skew = distanceFromCenter / rect.width * maxSkewAngle * skewFactor * -1; // Reversed direction
+        const skew = distanceFromCenter / rect.width * maxSkewAngle * skewFactor * -1;
         setSkewAngle(skew);
 
         const maxImageSkewAngle = 80;
         const imageskewFactor = 0.9;
-        const imageSkew = distanceFromCenter / rect.width * maxImageSkewAngle * imageskewFactor * -1; // Reversed direction
+        const imageSkew = distanceFromCenter / rect.width * maxImageSkewAngle * imageskewFactor * -1;
         setImageSkewAngle(imageSkew);
 
         const maxRotation = 20;
