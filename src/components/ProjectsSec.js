@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useRef } from "react";
+import { NavLink } from "react-router-dom";
 
 const Projects = () => {
     const [scrollProgress, setScrollProgress] = useState(0);
@@ -65,7 +66,7 @@ const Projects = () => {
                                 <p className='projects-inner-grid-item-info-tag'>Website / Game Server</p>
                                 <div className='projects-inner-grid-item-info-bottom'>
                                     <h3 className='projects-inner-grid-item-info-bottom-title'>xCraft</h3>
-                                    <button className='projects-inner-grid-item-info-bottom-button'>Learn more</button>
+                                    <NavLink to="projects/xcraft" className='projects-inner-grid-item-info-bottom-button'>Learn more</NavLink>
                                 </div>
                             </div>
                         </div>
@@ -74,7 +75,7 @@ const Projects = () => {
                                 <p className='projects-inner-grid-item-info-tag'>Website</p>
                                 <div className='projects-inner-grid-item-info-bottom'>
                                     <h3 className='projects-inner-grid-item-info-bottom-title'>YME - Fashion and Streetwear</h3>
-                                    <button className='projects-inner-grid-item-info-bottom-button'>Learn more</button>
+                                    <NavLink to="projects/yme" className='projects-inner-grid-item-info-bottom-button'>Learn more</NavLink>
                                 </div>
                             </div>
                             <div className='projects-inner-grid-item-image'>
@@ -86,10 +87,10 @@ const Projects = () => {
                                 <img alt='' src={process.env.PUBLIC_URL + `/images/projects/gg/showcase.jpg`}/>
                             </div>
                             <div className='projects-inner-grid-item-info'>
-                                <p className='projects-inner-grid-item-info-tag'>Poster</p>
+                                <p className='projects-inner-grid-item-info-tag'>Logo / Poster</p>
                                 <div className='projects-inner-grid-item-info-bottom'>
                                     <h3 className='projects-inner-grid-item-info-bottom-title'>Lanmine 36 - Grøss og Gru</h3>
-                                    <button className='projects-inner-grid-item-info-bottom-button'>Learn more</button>
+                                    <NavLink to="projects/gg" className='projects-inner-grid-item-info-bottom-button'>Learn more</NavLink>
                                 </div>
                             </div>
                         </div>
@@ -99,7 +100,7 @@ const Projects = () => {
                                 <div className='projects-inner-grid-item-info-bottom'>
                                     <h3 className='projects-inner-grid-item-info-bottom-title'>A Much Longer Project
                                         Name</h3>
-                                    <button className='projects-inner-grid-item-info-bottom-button'>Learn more</button>
+                                    <NavLink to="projects/" className='projects-inner-grid-item-info-bottom-button'>Learn more</NavLink>
                                 </div>
                             </div>
                             <div className='projects-inner-grid-item-image'>

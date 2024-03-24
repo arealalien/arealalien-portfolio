@@ -36,7 +36,7 @@ function Home() {
                     <>
                         <Navbar pagename="Home" />
                         <header>
-                            <Banner />
+                            <Banner bannerwords="Designer , Developer , Photographer , " />
                             {!loading && (
                                 <div className='transition-image final'>
                                     <motion.img

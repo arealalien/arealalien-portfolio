@@ -21,9 +21,16 @@ const letterAni = {
     },
 };
 
-const Banner = () => {
+const Banner = ({ bannerwords }) => {
     const [playMarquee, setPlayMarquee] = useState(false);
-    const titleWithHTML = ["D", "e", "s", "i", "g", "n", "e", "r", " ", <b className='space'>·</b>, " ", "D", "e", "v", "e", "l", "o", "p", "e", "r", " ", <b className='space'>·</b>, " ", "P", "h", "o", "t", "o", "g", "r", "a", "p", "h", "e", "r", " ", <b className='space'>·</b>];
+    const titleWithHTML = bannerwords.split(',').flatMap((word, index, array) => {
+        const characters = [...word.trim()];
+        if (index < array.length - 1) {
+            characters.push(<b className='space'>·</b>);
+            characters.push(' ');
+        }
+        return characters;
+    });
 
     useEffect(() => {
         setTimeout(() => {
