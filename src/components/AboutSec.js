@@ -40,56 +40,59 @@ const About = () => {
     };
 
     return (
-        <section className='about'>
-            <div className='about-inner component-grid view-width'>
-                <div className='component-grid-left cgl-space-bet'>
-                    <div className='about-inner-left'>
-                        <h2 className='component-grid-title'>/About Me</h2>
-                        <h3 className='about-inner-left-title'>I craft engaging digital experiences that drive results</h3>
-                        <button className='about-inner-left-button'>Learn More</button>
+        <>
+            <section className='about'>
+                <div className='about-inner component-grid view-width'>
+                    <div className='component-grid-left cgl-space-bet'>
+                        <div className='about-inner-left'>
+                            <h2 className='component-grid-title'>/About Me</h2>
+                            <h3 className='about-inner-left-title'>I craft engaging digital experiences that drive
+                                results</h3>
+                            <button className='about-inner-left-button'>Learn More</button>
+                        </div>
                     </div>
-                </div>
-                <div
-                    className="component-grid-right"
-                    onMouseEnter={handleMouseEnter}
-                    onMouseLeave={handleMouseLeave}
-                    style={{textAlign: isSmallScreen ? "center" : "left"}}
-                >
                     <div
-                        className="about-inner-video-button"
-                        style={{
-                            left: isHovering || isSmallScreen ? "auto" : "-7.5em",
-                            transform: `translate(${buttonPosition.x}px, ${buttonPosition.y}px)`,
-                            transition: "transform 0.35s cubic-bezier(.175, .685, .32, 0.94)",
-                        }}
+                        className="component-grid-right"
+                        onMouseEnter={handleMouseEnter}
+                        onMouseLeave={handleMouseLeave}
+                        style={{textAlign: isSmallScreen ? "center" : "left"}}
                     >
-                        <svg
-                            xmlns="http://www.w3.org/2000/svg"
-                            width="48"
-                            height="48"
-                            viewBox="0 0 24 24"
-                            fill="none"
-                            data-reactroot=""
+                        <div
+                            className="about-inner-video-button"
+                            style={{
+                                left: isHovering || isSmallScreen ? "auto" : "-7.5em",
+                                transform: `translate(${buttonPosition.x}px, ${buttonPosition.y}px)`,
+                                transition: "transform 0.35s cubic-bezier(.175, .685, .32, 0.94)",
+                            }}
                         >
-                            <path
-                                strokeLinejoin="round"
-                                strokeLinecap="round"
-                                strokeWidth="1.5"
-                                stroke="#ffffff"
+                            <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                width="48"
+                                height="48"
+                                viewBox="0 0 24 24"
                                 fill="none"
-                                d="M18 12L6 5V19L18 12Z"
-                            />
-                        </svg>
-                    </div>
-                    <div className='about-inner-video' onMouseMove={handleMouseMove}>
-                        <div className='about-inner-video-overlay'></div>
-                        <video className='about-inner-video-content' autoPlay muted loop>
-                            <source src={process.env.PUBLIC_URL + `/videos/about.webm`} type='video/webm'/>
-                        </video>
+                                data-reactroot=""
+                            >
+                                <path
+                                    strokeLinejoin="round"
+                                    strokeLinecap="round"
+                                    strokeWidth="1.5"
+                                    stroke="#ffffff"
+                                    fill="none"
+                                    d="M18 12L6 5V19L18 12Z"
+                                />
+                            </svg>
+                        </div>
+                        <div className='about-inner-video' onMouseMove={handleMouseMove}>
+                            <div className='about-inner-video-overlay'></div>
+                            <video className='about-inner-video-content' autoPlay muted loop>
+                                <source src={process.env.PUBLIC_URL + `/videos/about.webm`} type='video/webm'/>
+                            </video>
+                        </div>
                     </div>
                 </div>
-            </div>
-        </section>
+            </section>
+        </>
     );
 };
 

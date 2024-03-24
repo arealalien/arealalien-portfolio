@@ -1,3 +1,9 @@
+.projects-header {
+  &-banner {
+    width: 100%; height: 100vh;
+    position: relative;
+  }
+}
 .projects {
   padding: 20em 0;
   width: calc(100vw - calc($view-width-padding / 2));

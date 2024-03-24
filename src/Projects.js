@@ -6,6 +6,7 @@ import Navbar from "./components/Navbar";
 import ProjectsSec from "./components/ProjectsSec";
 import TimelineSec from "./components/TimelineSec";
 import Footer from "./components/Footer";
+import Banner from "./components/Banner";
 
 function Projects() {
     return (
@@ -13,8 +14,10 @@ function Projects() {
             <div className='grain'
                  style={{backgroundImage: `url(${process.env.PUBLIC_URL}/images/grain/noise.gif)`}}></div>
             <Navbar pagename="Projects"/>
-            <header>
-
+            <header className="projects-header">
+                <div className="projects-header-banner">
+                    <Banner bannerwords="Projects , Projects , Projects , "/>
+                </div>
             </header>
             <ProjectsSec/>
             <TimelineSec/>
