@@ -11,6 +11,8 @@ const Navbar  = ({ pagename }) => {
     const [scale, setScale] = useState(1);
     const [rotation, setRotation] = useState(0);
     const [pinOpacity, setPinOpacity] = useState(0.1);
+    const [showreelMenuVisible, setShowreelMenuVisible] = useState(false);
+    const [showreelActive, setShowreelActive] = useState(false);
 
     useEffect(() => {
         const handleScroll = () => {
@@ -87,6 +89,18 @@ const Navbar  = ({ pagename }) => {
         setPinOpacity(0.1);
     };
 
+    const toggleShowreelMenu = () => {
+        setShowreelMenuVisible((prevState) => !prevState);
+    };
+
+    const handleShowreelClick = () => {
+        setShowreelActive(true);
+    };
+
+    const handleShowreelBackgroundClick = () => {
+        setShowreelActive(false);
+    };
+
 
     return (
     <motion.div
@@ -100,7 +114,7 @@ const Navbar  = ({ pagename }) => {
       className='navbar'>
       <nav className='navbar-inner view-width' style={{ backgroundColor: navbarBackgroundColor }}>
         <div className='navbar-inner-left'>
-          <button className='navbar-inner-left-button'>My reel</button>
+          <button className='navbar-inner-left-button' onClick={handleShowreelClick}>My reel</button>
         </div>
         <div className='navbar-inner-center'>
           <NavLink to="/" className='navbar-inner-center-logo'>
@@ -207,6 +221,13 @@ const Navbar  = ({ pagename }) => {
                     </div>
                 </div>
             </div>
+        </div>
+        <div className="showreel" style={{ pointerEvents: showreelActive ? "auto" : "none", opacity: showreelActive ? "1" : "0" }}>
+            <iframe className="showreel-video" src="https://www.youtube.com/embed/xlrmk40nDlQ?si=LGldanYDseFGE_pq"
+                    title="YouTube video player"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    referrerPolicy="strict-origin-when-cross-origin" allowFullScreen></iframe>
+            <div className="showreel-background" onClick={handleShowreelBackgroundClick}></div>
         </div>
     </motion.div>
     );
