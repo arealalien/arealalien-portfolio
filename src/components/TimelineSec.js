@@ -171,8 +171,8 @@ const TimelineSec = () => {
                                          transition: 'transform 1s cubic-bezier(.175, .685, .32, 1), opacity .3s cubic-bezier(.175, .285, .32, 1), width .2s cubic-bezier(.175, .285, .32, 1)'
                                      }}
                                 >
-                                    <Image src={process.env.PUBLIC_URL + `/images/projects/gg/showcase.jpg`}
-                                           fallback={process.env.PUBLIC_URL + `/images/projects/gg/showcase.jpg`}/>
+                                    <Image src={process.env.PUBLIC_URL + `/images/projects/gg/gg.jpg`}
+                                           fallback={process.env.PUBLIC_URL + `/images/projects/gg/gg.jpg`}/>
                                 </div>
                                 <p className='timeline-inner-grid-item-content-date'>12.07.2023</p>
                                 <div className='timeline-inner-grid-item-content-divider'></div>

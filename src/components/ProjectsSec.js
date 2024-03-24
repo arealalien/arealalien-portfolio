@@ -60,7 +60,7 @@ const Projects = () => {
 
                         <div className='projects-inner-grid-item pigif'>
                             <div className='projects-inner-grid-item-image'>
-                                <img alt='' src={process.env.PUBLIC_URL + `/images/projects/xcraft/banner.jpg`}/>
+                                <img alt='' src={process.env.PUBLIC_URL + `/images/projects/xcraft/xcraft.jpg`}/>
                             </div>
                             <div className='projects-inner-grid-item-info'>
                                 <p className='projects-inner-grid-item-info-tag'>Website / Game Server</p>
@@ -79,12 +79,12 @@ const Projects = () => {
                                 </div>
                             </div>
                             <div className='projects-inner-grid-item-image'>
-                                <img alt='' src={process.env.PUBLIC_URL + `/images/projects/yme/showcase.jpg`}/>
+                                <img alt='' src={process.env.PUBLIC_URL + `/images/projects/yme/yme.jpg`}/>
                             </div>
                         </div>
                         <div className='projects-inner-grid-item pigif'>
                             <div className='projects-inner-grid-item-image'>
-                                <img alt='' src={process.env.PUBLIC_URL + `/images/projects/gg/showcase.jpg`}/>
+                                <img alt='' src={process.env.PUBLIC_URL + `/images/projects/gg/gg.jpg`}/>
                             </div>
                             <div className='projects-inner-grid-item-info'>
                                 <p className='projects-inner-grid-item-info-tag'>Logo / Poster</p>
