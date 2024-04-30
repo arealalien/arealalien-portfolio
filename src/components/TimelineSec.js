@@ -185,18 +185,18 @@ const TimelineSec = () => {
                         </div>
                         <div className='timeline-inner-grid-item'
                              onMouseMove={handleMouseMove}
-                             onMouseEnter={() => handleMouseEnter('banner')}
+                             onMouseEnter={() => handleMouseEnter('xcraft')}
                              onMouseLeave={handleMouseLeave}>
                             <div className='timeline-inner-grid-item-content'>
                                 <div className='timeline-inner-grid-item-content-image'
                                      style={{
-                                         transform: `translate(${buttonPosition.x}px, ${buttonPosition.y}px) skew(${buttonPosition.skewX}deg, ${buttonPosition.skewY}deg) scale(${hoveredItem === 'banner' ? "1, 1" : "0, 0"})`,
-                                         opacity: hoveredItem === 'banner' ? 1 : 0,
+                                         transform: `translate(${buttonPosition.x}px, ${buttonPosition.y}px) skew(${buttonPosition.skewX}deg, ${buttonPosition.skewY}deg) scale(${hoveredItem === 'xcraft' ? "1, 1" : "0, 0"})`,
+                                         opacity: hoveredItem === 'xcraft' ? 1 : 0,
                                          transition: 'transform 1s cubic-bezier(.175, .685, .32, 1), opacity .3s cubic-bezier(.175, .285, .32, 1), width .2s cubic-bezier(.175, .285, .32, 1)'
                                      }}
                                 >
-                                    <Image src={process.env.PUBLIC_URL + `/images/projects/xcraft/banner.jpg`}
-                                           fallback={process.env.PUBLIC_URL + `/images/projects/xcraft/banner.jpg`}/>
+                                    <Image src={process.env.PUBLIC_URL + `/images/projects/xcraft/xcraft.jpg`}
+                                           fallback={process.env.PUBLIC_URL + `/images/projects/xcraft/xcraft.jpg`}/>
                                 </div>
                                 <p className='timeline-inner-grid-item-content-date'>02.09.2020</p>
                                 <div className='timeline-inner-grid-item-content-divider'></div>
