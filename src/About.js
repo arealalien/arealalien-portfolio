@@ -17,6 +17,8 @@ function About() {
             <header className="about-header">
                 <div className="about-header-banner">
                     <Banner bannerwords={`Areal Alien , Areal Alien , Areal Alien , `}/>
+                    <img alt='' src={process.env.PUBLIC_URL + `/images/me.jpg`}/>
+                    <img className="about-header-blur" alt='' src={process.env.PUBLIC_URL + `/images/me.jpg`}/>
                 </div>
             </header>
             <AboutSec/>
