@@ -14,15 +14,15 @@ const Gallery = () => {
                         <div className='gallery-inner-showcase'>
                             <div className='gallery-inner-showcase-item'>
                                 <img className='gallery-inner-showcase-item-background gis-wide'
-                                     src={process.env.PUBLIC_URL + `/images/gallery/image-12.jpg`}/>
+                                     src={process.env.PUBLIC_URL + `/images/gallery/image-6.jpg`}/>
                             </div>
                             <div className='gallery-inner-showcase-item'>
                                 <img className='gallery-inner-showcase-item-background gis-wide'
-                                     src={process.env.PUBLIC_URL + `/images/gallery/image-28.jpg`}/>
+                                     src={process.env.PUBLIC_URL + `/images/gallery/image-8.jpg`}/>
                             </div>
                             <div className='gallery-inner-showcase-item'>
                                 <img className='gallery-inner-showcase-item-background gis-wide'
-                                     src={process.env.PUBLIC_URL + `/images/gallery/image-1.jpg`}/>
+                                     src={process.env.PUBLIC_URL + `/images/gallery/image-2.jpg`}/>
                             </div>
                         </div>
                     </div>
