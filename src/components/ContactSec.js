@@ -10,7 +10,7 @@ const Contact = () => {
                     </div>
                     <div className='component-grid-bottom'>
                         <h1>Ready to build experiences your audience will love?</h1>
-                        <button>Let's talk</button>
+                        <button onClick={() => window.location = 'mailto:arealalien.business@gmail.com'}>Let's talk</button>
                     </div>
                 </div>
             </section>

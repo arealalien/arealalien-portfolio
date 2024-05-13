@@ -1,9 +1,74 @@
 .intro {
   width: calc(100vw - calc($view-width-padding / 2));
   min-height: 50em;
+  border-top: 1px solid hslac($white, .1);
   @include flex-col();
 
-  &-inner {
+  .component-grid-top {
+    @include flex-col();
 
+  }
+  .component-grid-bottom {
+    gap: 6em;
+    @include flex-col();
+
+    h1 {
+      width: 60%;
+      text-align: center;
+      font-family: $font-main;
+      font-size: calc($heading-medium + 1rem);
+      font-weight: 800;
+      line-height: 1.4em;
+
+      span {
+        font-size: inherit;
+        font-weight: inherit;
+        line-height: inherit;
+      }
+      .out {
+        color: transparent !important;
+        -webkit-text-stroke: 1px hslac($white, 1);
+      }
+    }
+  }
+  &-inner {
+    padding: 20em 0;
+    width: 100%; height: 100%;
+    position: relative;
+    grid-template-columns: 1fr;
+    @include flex-center();
+
+    &-foreground {
+      width: 100%; height: 100%;
+      position: relative;
+      gap: 3em;
+      @include flex-col();
+    }
+    &-social-icon {
+      $svg-width: 3.2em;
+      position: absolute;
+      width: calc(2em + $svg-width); height: calc(2em + $svg-width);
+      transition: all .35s cubic-bezier($transition-main, 1);
+      cursor: pointer;
+      @include flex-center();
+
+      &:hover {
+
+      }
+      svg {
+        width: $svg-width;
+      }
+      .i-instagram, .i-github, .i-twitter {
+        fill: hslac($white, 1);
+      }
+      .i-linkedin {
+        fill: none;
+        stroke: hslac($white, 1);
+        stroke-width: 1px;
+      }
+    }
+    .cgt {
+      text-align: center;
+    }
   }
 }
