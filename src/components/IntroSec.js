@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 const IntroSec = () => {
     const [age, setAge] = useState(null);
     const [iconPositions, setIconPositions] = useState([]);
+    const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
 
     useEffect(() => {
         const birthDate = new Date("2001-12-18");
@@ -15,13 +16,30 @@ const IntroSec = () => {
         const gridSize = 20; // Adjust grid size as needed
         const cellSize = 5; // Adjust cell size as needed
 
+        const centerX = gridSize / 2;
+        const centerY = gridSize / 2;
+        const noGoAreaSize = 6; // Adjust size of the central area
+
         const positions = [];
-        const getRandomPosition = () => Math.floor(Math.random() * gridSize);
+
+        const isInNoGoArea = (pos) => {
+            const halfNoGoAreaSize = noGoAreaSize / 2;
+            return (
+                pos.left >= (centerX - halfNoGoAreaSize) * cellSize &&
+                pos.left <= (centerX + halfNoGoAreaSize) * cellSize &&
+                pos.top >= (centerY - halfNoGoAreaSize) * cellSize &&
+                pos.top <= (centerY + halfNoGoAreaSize) * cellSize
+            );
+        };
+
         const isOverlapping = (pos) => {
+            if (isInNoGoArea(pos)) {
+                return true;
+            }
             for (const position of positions) {
                 const xDiff = Math.abs(position.left - pos.left);
                 const yDiff = Math.abs(position.top - pos.top);
-                if (xDiff < 2 && yDiff < 2) { // Adjust overlap threshold as needed
+                if (xDiff < 2 * cellSize && yDiff < 2 * cellSize) { // Adjust overlap threshold as needed
                     return true;
                 }
             }
@@ -49,11 +67,14 @@ const IntroSec = () => {
         const generateIcons = () => {
             const iconPositions = [];
             const iconTypes = ['instagram', 'linkedin', 'github', 'twitter'];
+            const blurLevels = ['0rem', '0.1rem', '0.2rem', '0.3rem'];
+
             iconTypes.forEach(icon => {
-                for (let i = 0; i < 4; i++) {
+                for (let i = 0; i < 6; i++) {
                     iconPositions.push({
                         type: icon,
-                        position: generatePosition()
+                        position: generatePosition(),
+                        blur: blurLevels[Math.floor(Math.random() * blurLevels.length)]
                     });
                 }
             });
@@ -61,6 +82,24 @@ const IntroSec = () => {
         };
 
         setIconPositions(generateIcons());
+    }, []);
+
+    useEffect(() => {
+        const handleMouseMove = (event) => {
+            const { clientX, clientY } = event;
+            setMousePosition({ x: clientX, y: clientY });
+        };
+
+        const introElement = document.querySelector('.intro');
+        if (introElement) {
+            introElement.addEventListener('mousemove', handleMouseMove);
+        }
+
+        return () => {
+            if (introElement) {
+                introElement.removeEventListener('mousemove', handleMouseMove);
+            }
+        };
     }, []);
 
     return (
@@ -71,7 +110,7 @@ const IntroSec = () => {
                         <h2 className='component-grid-title cgt'>/Areal Alien/</h2>
                     </div>
                     <div className='component-grid-bottom'>
-                        <h1>Hi, I'm Arild, a <span className='age'>{age}</span> year old <span
+                        <h1>Hi 👋 I'm Arild, a <span className='age'>{age}</span> year old <span
                             className='out'>designer</span>, <span className='out'>developer</span> and <span
                             className='out'>photographer</span> from Norway.</h1>
                     </div>
@@ -84,7 +123,9 @@ const IntroSec = () => {
                                     "https://twitter.com/Areal_Alien"}
                               target="_blank" rel="noopener noreferrer" className={`intro-inner-social-icon ic-${item.type}-${index + 1}`} style={{
                             top: `${item.position?.top}%`,
-                            left: `${item.position?.left}%`
+                            left: `${item.position?.left}%`,
+                            transform: `translate(${(mousePosition.x - window.innerWidth / 2) * (0.015 + (index % 4) * 0.0075)}px, ${(mousePosition.y - window.innerHeight / 2) * (0.015 + (index % 4) * 0.0075)}px)`,
+                            filter: `blur(${item.blur})`
                         }}>
                             <svg className={`i-${item.type}`} xmlns="http://www.w3.org/2000/svg" fill="#ffffff" viewBox="0 0 50 50"
                                  width="50px"

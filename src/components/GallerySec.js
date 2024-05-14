@@ -13,15 +13,15 @@ const Gallery = () => {
                     <div className='component-grid-right view-width'>
                         <div className='gallery-inner-showcase'>
                             <div className='gallery-inner-showcase-item'>
-                                <img className='gallery-inner-showcase-item-background gis-wide'
+                                <img className='gallery-inner-showcase-item-background'
                                      src={process.env.PUBLIC_URL + `/images/gallery/image-6.jpg`}/>
                             </div>
                             <div className='gallery-inner-showcase-item'>
-                                <img className='gallery-inner-showcase-item-background gis-wide'
+                                <img className='gallery-inner-showcase-item-background'
                                      src={process.env.PUBLIC_URL + `/images/gallery/image-8.jpg`}/>
                             </div>
                             <div className='gallery-inner-showcase-item'>
-                                <img className='gallery-inner-showcase-item-background gis-wide'
+                                <img className='gallery-inner-showcase-item-background'
                                      src={process.env.PUBLIC_URL + `/images/gallery/image-2.jpg`}/>
                             </div>
                         </div>

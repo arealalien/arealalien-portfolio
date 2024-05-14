@@ -2,6 +2,7 @@
   width: calc(100vw - calc($view-width-padding / 2));
   min-height: 50em;
   border-top: 1px solid hslac($white, .1);
+  overflow: hidden;
   @include flex-col();
 
   .component-grid-top {
@@ -42,28 +43,39 @@
       width: 100%; height: 100%;
       position: relative;
       gap: 3em;
+      pointer-events: none;
+      user-select: none;
+      z-index: 50;
       @include flex-col();
     }
     &-social-icon {
       $svg-width: 3.2em;
       position: absolute;
       width: calc(2em + $svg-width); height: calc(2em + $svg-width);
-      transition: all .35s cubic-bezier($transition-main, 1);
+      transition: opacity .35s cubic-bezier($transition-main, 1), transform 1s cubic-bezier($transition-main, 1);
+      will-change: transform;
+      opacity: .8;
       cursor: pointer;
       @include flex-center();
 
       &:hover {
-
+        opacity: .5;
       }
       svg {
         width: $svg-width;
       }
-      .i-instagram, .i-github, .i-twitter {
-        fill: hslac($white, 1);
+      .i-instagram {
+        fill: hslac($pink, 1);
+      }
+      .i-github {
+        fill: hslac($lightpurple, 1);
+      }
+      .i-twitter {
+        fill: hslac($blue, 1);
       }
       .i-linkedin {
         fill: none;
-        stroke: hslac($white, 1);
+        stroke: hslac($lightblue, 1);
         stroke-width: 1px;
       }
     }
