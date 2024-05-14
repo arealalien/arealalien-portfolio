@@ -63,6 +63,7 @@
       }
       svg {
         width: $svg-width;
+        filter: grayscale(100%);
       }
       .i-instagram {
         fill: hslac($pink, 1);
