@@ -7,27 +7,31 @@ const Gallery = () => {
     const [sliderRef] = useKeenSlider({
         loop: true,
         mode: "free",
-        initial: "4",
+        initial: 0,
         dragSpeed: ".6",
+        centered: true,
         easing: "cubic-bezier(.175, .685, .32, 1)",
         breakpoints: {
-            "(min-width: 520px)": {
-                slides: { perView: 2, spacing: 15 },
+            "(min-width: 500px)": {
+                slides: { perView: 1.2, spacing: 15 },
             },
-            "(min-width: 800px)": {
-                slides: { perView: 3, spacing: 15 },
+            "(min-width: 600px)": {
+                slides: { perView: 2.2, spacing: 15 },
+            },
+            "(min-width: 900px)": {
+                slides: { perView: 2.5, spacing: 15 },
             },
             "(min-width: 1400px)": {
-                slides: { perView: 4, spacing: 15 },
+                slides: { perView: 3.5, spacing: 15 },
             },
             "(min-width: 2200px)": {
-                slides: { perView: 5, spacing: 15 },
+                slides: { perView: 5.5, spacing: 15 },
             },
             "(min-width: 2600px)": {
-                slides: { perView: 6, spacing: 15 },
+                slides: { perView: 6.5, spacing: 15 },
             },
             "(min-width: 3000px)": {
-                slides: { perView: 7, spacing: 15 },
+                slides: { perView: 7.5, spacing: 15 },
             },
         },
         slides: {
