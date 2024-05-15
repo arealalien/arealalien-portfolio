@@ -1,6 +1,7 @@
 import React from "react";
-import { useKeenSlider } from "keen-slider/react"
-import "keen-slider/keen-slider.min.css"
+import { NavLink } from "react-router-dom";
+import { useKeenSlider } from "keen-slider/react";
+import "keen-slider/keen-slider.min.css";
 
 const Gallery = () => {
     const [sliderRef] = useKeenSlider({
@@ -50,9 +51,21 @@ const Gallery = () => {
                                 <div className='keen-slider__slide gallery-inner-showcase-item'>
                                     <div className='gallery-inner-showcase-item-info'>
                                         <p className='gallery-inner-showcase-item-info-date'>14.05.2024</p>
+                                        <h3 className='gallery-inner-showcase-item-info-title'>Olympus</h3>
+                                        <NavLink to={`/gallery?photos=${encodeURIComponent('Olympus')}`} className='gallery-inner-showcase-item-info-button'>Open
+                                            Gallery
+                                        </NavLink>
+                                    </div>
+                                    <img className='gallery-inner-showcase-item-background'
+                                         src={process.env.PUBLIC_URL + `/images/gallery/olympus/DSCF8211-2-min.jpg`}/>
+                                </div>
+                                <div className='keen-slider__slide gallery-inner-showcase-item'>
+                                    <div className='gallery-inner-showcase-item-info'>
+                                        <p className='gallery-inner-showcase-item-info-date'>14.05.2024</p>
                                         <h3 className='gallery-inner-showcase-item-info-title'>Orange Bird</h3>
-                                        <button className='gallery-inner-showcase-item-info-button'>Open Gallery
-                                        </button>
+                                        <NavLink to="/gallery" className='gallery-inner-showcase-item-info-button'>Open
+                                            Gallery
+                                        </NavLink>
                                     </div>
                                     <img className='gallery-inner-showcase-item-background'
                                          src={process.env.PUBLIC_URL + `/images/gallery/image-6.jpg`}/>
@@ -61,8 +74,9 @@ const Gallery = () => {
                                     <div className='gallery-inner-showcase-item-info'>
                                         <p className='gallery-inner-showcase-item-info-date'>14.05.2024</p>
                                         <h3 className='gallery-inner-showcase-item-info-title'>Snow Bird</h3>
-                                        <button className='gallery-inner-showcase-item-info-button'>Open Gallery
-                                        </button>
+                                        <NavLink to="/gallery" className='gallery-inner-showcase-item-info-button'>Open
+                                            Gallery
+                                        </NavLink>
                                     </div>
                                     <img className='gallery-inner-showcase-item-background'
                                          src={process.env.PUBLIC_URL + `/images/gallery/image-8.jpg`}/>
@@ -70,9 +84,10 @@ const Gallery = () => {
                                 <div className='keen-slider__slide gallery-inner-showcase-item'>
                                     <div className='gallery-inner-showcase-item-info'>
                                         <p className='gallery-inner-showcase-item-info-date'>14.05.2024</p>
-                                        <h3 className='gallery-inner-showcase-item-info-title'>White Bird</h3>
-                                        <button className='gallery-inner-showcase-item-info-button'>Open Gallery
-                                        </button>
+                                        <h3 className='gallery-inner-showcase-item-info-title'>Animals</h3>
+                                        <NavLink to="/gallery" className='gallery-inner-showcase-item-info-button'>Open
+                                            Gallery
+                                        </NavLink>
                                     </div>
                                     <img className='gallery-inner-showcase-item-background'
                                          src={process.env.PUBLIC_URL + `/images/gallery/image-15.jpg`}/>
@@ -80,9 +95,10 @@ const Gallery = () => {
                                 <div className='keen-slider__slide gallery-inner-showcase-item'>
                                     <div className='gallery-inner-showcase-item-info'>
                                         <p className='gallery-inner-showcase-item-info-date'>14.05.2024</p>
-                                        <h3 className='gallery-inner-showcase-item-info-title'>Snow Bird</h3>
-                                        <button className='gallery-inner-showcase-item-info-button'>Open Gallery
-                                        </button>
+                                        <h3 className='gallery-inner-showcase-item-info-title'>Summer Portraits</h3>
+                                        <NavLink to="/gallery" className='gallery-inner-showcase-item-info-button'>Open
+                                            Gallery
+                                        </NavLink>
                                     </div>
                                     <img className='gallery-inner-showcase-item-background'
                                          src={process.env.PUBLIC_URL + `/images/gallery/image-3.jpg`}/>
@@ -90,9 +106,10 @@ const Gallery = () => {
                                 <div className='keen-slider__slide gallery-inner-showcase-item'>
                                     <div className='gallery-inner-showcase-item-info'>
                                         <p className='gallery-inner-showcase-item-info-date'>14.05.2024</p>
-                                        <h3 className='gallery-inner-showcase-item-info-title'>Snow Bird</h3>
-                                        <button className='gallery-inner-showcase-item-info-button'>Open Gallery
-                                        </button>
+                                        <h3 className='gallery-inner-showcase-item-info-title'>Lost</h3>
+                                        <NavLink to="/gallery" className='gallery-inner-showcase-item-info-button'>Open
+                                            Gallery
+                                        </NavLink>
                                     </div>
                                     <img className='gallery-inner-showcase-item-background'
                                          src={process.env.PUBLIC_URL + `/images/gallery/image-28.jpg`}/>
@@ -100,9 +117,10 @@ const Gallery = () => {
                                 <div className='keen-slider__slide gallery-inner-showcase-item'>
                                     <div className='gallery-inner-showcase-item-info'>
                                         <p className='gallery-inner-showcase-item-info-date'>14.05.2024</p>
-                                        <h3 className='gallery-inner-showcase-item-info-title'>Snow Bird</h3>
-                                        <button className='gallery-inner-showcase-item-info-button'>Open Gallery
-                                        </button>
+                                        <h3 className='gallery-inner-showcase-item-info-title'>Spring Portraits</h3>
+                                        <NavLink to="/gallery" className='gallery-inner-showcase-item-info-button'>Open
+                                            Gallery
+                                        </NavLink>
                                     </div>
                                     <img className='gallery-inner-showcase-item-background'
                                          src={process.env.PUBLIC_URL + `/images/gallery/image-25.jpg`}/>
@@ -110,9 +128,10 @@ const Gallery = () => {
                                 <div className='keen-slider__slide gallery-inner-showcase-item'>
                                     <div className='gallery-inner-showcase-item-info'>
                                         <p className='gallery-inner-showcase-item-info-date'>14.05.2024</p>
-                                        <h3 className='gallery-inner-showcase-item-info-title'>Snow Bird</h3>
-                                        <button className='gallery-inner-showcase-item-info-button'>Open Gallery
-                                        </button>
+                                        <h3 className='gallery-inner-showcase-item-info-title'>Summer Vibes</h3>
+                                        <NavLink to="/gallery" className='gallery-inner-showcase-item-info-button'>Open
+                                            Gallery
+                                        </NavLink>
                                     </div>
                                     <img className='gallery-inner-showcase-item-background'
                                          src={process.env.PUBLIC_URL + `/images/gallery/image-1.jpg`}/>
@@ -120,12 +139,24 @@ const Gallery = () => {
                                 <div className='keen-slider__slide gallery-inner-showcase-item'>
                                     <div className='gallery-inner-showcase-item-info'>
                                         <p className='gallery-inner-showcase-item-info-date'>14.05.2024</p>
-                                        <h3 className='gallery-inner-showcase-item-info-title'>Snow Bird</h3>
-                                        <button className='gallery-inner-showcase-item-info-button'>Open Gallery
-                                        </button>
+                                        <h3 className='gallery-inner-showcase-item-info-title'>Neon Portraits</h3>
+                                        <NavLink to="/gallery" className='gallery-inner-showcase-item-info-button'>Open
+                                            Gallery
+                                        </NavLink>
                                     </div>
                                     <img className='gallery-inner-showcase-item-background'
                                          src={process.env.PUBLIC_URL + `/images/gallery/image-17.jpg`}/>
+                                </div>
+                                <div className='keen-slider__slide gallery-inner-showcase-item'>
+                                    <div className='gallery-inner-showcase-item-info'>
+                                        <p className='gallery-inner-showcase-item-info-date'>14.05.2024</p>
+                                        <h3 className='gallery-inner-showcase-item-info-title'>Snowy Shooner</h3>
+                                        <NavLink to="/gallery" className='gallery-inner-showcase-item-info-button'>Open
+                                            Gallery
+                                        </NavLink>
+                                    </div>
+                                    <img className='gallery-inner-showcase-item-background'
+                                         src={process.env.PUBLIC_URL + `/images/gallery/image-24.jpg`}/>
                                 </div>
                             </div>
                         </div>
