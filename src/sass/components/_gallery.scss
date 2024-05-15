@@ -42,17 +42,9 @@
       }
     }
     &-showcase {
-      width: 100%;
+      width: 100vw;
       position: relative;
-      overflow: hidden;
-      @include flex-left();
 
-      &-glider {
-        position: relative;
-        gap: 2em;
-        transition: transform .5s cubic-bezier($transition-main, 1);
-        @include flex-left();
-      }
       &-item {
         width: 50em; height: 1fr;
         position: relative;
@@ -105,5 +97,11 @@
         }
       }
     }
+  }
+}
+.keen-slider {
+  cursor: grab;
+  &:active {
+    cursor: grabbing;
   }
 }
