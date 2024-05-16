@@ -14,7 +14,7 @@ function Gallery() {
     const queryParams = new URLSearchParams(location.search);
     const galleryPhotos = queryParams.get("photos");
 
-    if (galleryPhotos === "Olympus") {
+    if (galleryPhotos === "Olympus" || galleryPhotos === "spring-portraits") {
         return (
             <>
                 <div className='grain'
