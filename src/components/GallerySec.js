@@ -56,12 +56,25 @@ const Gallery = () => {
                                     <div className='gallery-inner-showcase-item-info'>
                                         <p className='gallery-inner-showcase-item-info-date'>14.05.2024</p>
                                         <h3 className='gallery-inner-showcase-item-info-title'>Olympus</h3>
-                                        <NavLink to={`/gallery?photos=${encodeURIComponent('Olympus')}`} className='gallery-inner-showcase-item-info-button'>Open
+                                        <NavLink to={`/gallery?photos=${encodeURIComponent('Olympus')}`}
+                                                 className='gallery-inner-showcase-item-info-button'>Open
                                             Gallery
                                         </NavLink>
                                     </div>
                                     <img className='gallery-inner-showcase-item-background'
                                          src={process.env.PUBLIC_URL + `/images/gallery/olympus/image-3.jpg`}/>
+                                </div>
+                                <div className='keen-slider__slide gallery-inner-showcase-item'>
+                                    <div className='gallery-inner-showcase-item-info'>
+                                        <p className='gallery-inner-showcase-item-info-date'>14.05.2024</p>
+                                        <h3 className='gallery-inner-showcase-item-info-title'>Butterfly</h3>
+                                        <NavLink to={`/gallery?photos=${encodeURIComponent('Butterfly')}`}
+                                                 className='gallery-inner-showcase-item-info-button'>Open
+                                            Gallery
+                                        </NavLink>
+                                    </div>
+                                    <img className='gallery-inner-showcase-item-background'
+                                         src={process.env.PUBLIC_URL + `/images/gallery/butterfly/image-10.jpg`}/>
                                 </div>
                                 <div className='keen-slider__slide gallery-inner-showcase-item'>
                                     <div className='gallery-inner-showcase-item-info'>
@@ -122,7 +135,8 @@ const Gallery = () => {
                                     <div className='gallery-inner-showcase-item-info'>
                                         <p className='gallery-inner-showcase-item-info-date'>14.05.2024</p>
                                         <h3 className='gallery-inner-showcase-item-info-title'>Spring Portraits</h3>
-                                        <NavLink to={`/gallery?photos=${encodeURIComponent('spring-portraits')}`} className='gallery-inner-showcase-item-info-button'>Open
+                                        <NavLink to={`/gallery?photos=${encodeURIComponent('spring-portraits')}`}
+                                                 className='gallery-inner-showcase-item-info-button'>Open
                                             Gallery
                                         </NavLink>
                                     </div>
