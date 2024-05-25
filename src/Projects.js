@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import './css/main.css';
 
 // Components
@@ -9,6 +9,10 @@ import Footer from "./components/Footer";
 import Banner from "./components/Banner";
 
 function Projects() {
+    useEffect(() => {
+        window.scrollTo(0, 0)
+    }, []);
+
     return (
         <>
             <div className='grain'

@@ -1,4 +1,5 @@
 import React from 'react';
+import { useEffect } from "react";
 import { useLocation } from "react-router-dom";
 import './css/main.css';
 
@@ -10,6 +11,10 @@ import Footer from "./components/Footer";
 import Banner from "./components/Banner";
 
 function Gallery() {
+    useEffect(() => {
+        window.scrollTo(0, 0)
+    }, []);
+
     const location = useLocation();
     const queryParams = new URLSearchParams(location.search);
     const galleryPhotos = queryParams.get("photos");

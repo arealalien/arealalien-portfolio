@@ -1,4 +1,5 @@
 import React from 'react';
+import { useEffect } from "react";
 import './css/main.css';
 
 // Components
@@ -7,6 +8,10 @@ import BlogSec from "./components/BlogSec";
 import Footer from "./components/Footer";
 
 function Blog() {
+    useEffect(() => {
+        window.scrollTo(0, 0)
+    }, []);
+
     return (
         <>
             <div className='grain'
