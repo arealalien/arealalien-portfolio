@@ -18,7 +18,8 @@ const Gallery = ({ photos }) => {
         document.getElementById(`left-image-${index}`).scrollIntoView({ behavior: "smooth", block: "center" });
         setActiveIndex(index);
     };
-    
+
+
     useEffect(() => {
         observer.current = new IntersectionObserver(
             (entries) => {
