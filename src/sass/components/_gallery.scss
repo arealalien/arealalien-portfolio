@@ -1,7 +1,74 @@
+.gbanner-2-s {
+  margin: 0 0 10em 0;
+  position: relative;
+}
 .gallery-header {
+  &-banner-2 {
+    margin: 35em 0 0 0;
+    width: 100%;
+    position: relative;
+    @include flex-col();
+
+    &-title {
+      top: 24em;
+      position: sticky;
+      z-index: 50;
+      @include flex-center();
+
+      h3 {
+        font-size: calc($heading-large + $heading-small);
+        font-family: $font-title;
+        text-transform: uppercase;
+      }
+    }
+    &-wrapper {
+      width: calc(100vw - 20em);
+      position: relative;
+      border-radius: 5rem;
+      overflow: hidden;
+      @include flex-center();
+    }
+    &-image {
+      width: 100%;
+      position: relative;
+    }
+    &-image-cutout {
+      width: 100%;
+      position: absolute;
+      z-index: 70;
+    }
+  }
   &-banner {
     width: 100%; height: 100vh;
     position: relative;
+    @include flex-center();
+
+    &-title {
+      top: 2em;
+      position: fixed;
+      font-size: $heading-large;
+      font-family: $font-title;
+      text-transform: uppercase;
+      z-index: 50;
+    }
+    &-wrapper {
+      width: calc(100vw - 20em); height: calc(100vh - 15em);
+      position: relative;
+      border-radius: 5rem;
+      overflow: hidden;
+      @include flex-center();
+    }
+    &-image {
+      max-width: 110%;
+      min-width: 100%; min-height: 100%;
+      position: absolute;
+      object-fit: cover;
+    }
+    &-image-cutout {
+      min-width: 100%; min-height: 100%;
+      position: absolute;
+      opacity: 0;
+    }
   }
 }
 .gallery {
