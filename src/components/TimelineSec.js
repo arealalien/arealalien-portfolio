@@ -97,8 +97,8 @@ const TimelineSec = () => {
                                          transition: 'transform 1s cubic-bezier(.175, .685, .32, 1), opacity .3s cubic-bezier(.175, .285, .32, 1), width .2s cubic-bezier(.175, .285, .32, 1)'
                                      }}
                                 >
-                                    <Image src={process.env.PUBLIC_URL + `/images/gallery/image-15.webp`}
-                                           fallback={process.env.PUBLIC_URL + `/images/gallery/image-15.jpg`}/>
+                                    <Image src={process.env.PUBLIC_URL + `/images/gallery/Animals/image-7.jpg`}
+                                           fallback={process.env.PUBLIC_URL + `/images/gallery/Animals/image-7.jpg`}/>
                                 </div>
                                 <p className='timeline-inner-grid-item-content-date'>15.03.2024</p>
                                 <div className='timeline-inner-grid-item-content-divider'></div>
@@ -122,15 +122,15 @@ const TimelineSec = () => {
                                          transition: 'transform 1s cubic-bezier(.175, .685, .32, 1), opacity .3s cubic-bezier(.175, .285, .32, 1), width .2s cubic-bezier(.175, .285, .32, 1)'
                                      }}
                                 >
-                                    <Image src={process.env.PUBLIC_URL + `/images/gallery/image-27.webp`}
-                                           fallback={process.env.PUBLIC_URL + `/images/gallery/image-27.jpg`}/>
+                                    <Image src={process.env.PUBLIC_URL + `/images/gallery/Spring%20Portraits/image-1.jpg`}
+                                           fallback={process.env.PUBLIC_URL + `/images/gallery/Spring%20Portraits/image-1.jpg`}/>
                                 </div>
                                 <p className='timeline-inner-grid-item-content-date'>22.01.2024</p>
                                 <div className='timeline-inner-grid-item-content-divider'></div>
                                 <div className='timeline-inner-grid-item-content-title'>
-                                    <h3 className='timeline-inner-grid-item-content-title-text'>Winter Photoshoot<span
+                                    <h3 className='timeline-inner-grid-item-content-title-text'>Spring Portraits<span
                                         className="outer" aria-hidden="true"><span
-                                        className="inner">Winter Photoshoot</span></span>
+                                        className="inner">Spring Portraits</span></span>
                                     </h3>
                                 </div>
                             </div>
