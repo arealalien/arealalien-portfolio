@@ -1,5 +1,5 @@
 import React from "react";
-import { NavLink } from "react-router-dom";
+import ScrollToTopNavLink from './ScrollToTopNavLink';
 import { useKeenSlider } from "keen-slider/react";
 import "keen-slider/keen-slider.min.css";
 
@@ -56,10 +56,9 @@ const Gallery = () => {
                                     <div className='gallery-inner-showcase-item-info'>
                                         <p className='gallery-inner-showcase-item-info-date'>06.04.2024</p>
                                         <h3 className='gallery-inner-showcase-item-info-title'>Olympus</h3>
-                                        <NavLink to={`/gallery?photos=${encodeURIComponent('Olympus')}`}
-                                                 className='gallery-inner-showcase-item-info-button'>Open
-                                            Gallery
-                                        </NavLink>
+                                        <ScrollToTopNavLink to={`/gallery?photos=${encodeURIComponent('Olympus')}`} className='gallery-inner-showcase-item-info-button'>
+                                            Open Gallery
+                                        </ScrollToTopNavLink>
                                     </div>
                                     <img className='gallery-inner-showcase-item-background'
                                          src={process.env.PUBLIC_URL + `/images/gallery/Olympus/image-6.jpg`}/>
@@ -68,10 +67,10 @@ const Gallery = () => {
                                     <div className='gallery-inner-showcase-item-info'>
                                         <p className='gallery-inner-showcase-item-info-date'>08.04.2024</p>
                                         <h3 className='gallery-inner-showcase-item-info-title'>Cyprus Vol 1</h3>
-                                        <NavLink to={`/gallery?photos=${encodeURIComponent('Cyprus Vol 1')}`}
+                                        <ScrollToTopNavLink to={`/gallery?photos=${encodeURIComponent('Cyprus Vol 1')}`}
                                                  className='gallery-inner-showcase-item-info-button'>Open
                                             Gallery
-                                        </NavLink>
+                                        </ScrollToTopNavLink>
                                     </div>
                                     <img className='gallery-inner-showcase-item-background'
                                          src={process.env.PUBLIC_URL + `/images/gallery/Cyprus%20Vol%201/image-2.jpg`}/>
@@ -80,10 +79,10 @@ const Gallery = () => {
                                     <div className='gallery-inner-showcase-item-info'>
                                         <p className='gallery-inner-showcase-item-info-date'>11.04.2024</p>
                                         <h3 className='gallery-inner-showcase-item-info-title'>Cyprus Vol 2</h3>
-                                        <NavLink to={`/gallery?photos=${encodeURIComponent('Cyprus Vol 2')}`}
+                                        <ScrollToTopNavLink to={`/gallery?photos=${encodeURIComponent('Cyprus Vol 2')}`}
                                                  className='gallery-inner-showcase-item-info-button'>Open
                                             Gallery
-                                        </NavLink>
+                                        </ScrollToTopNavLink>
                                     </div>
                                     <img className='gallery-inner-showcase-item-background'
                                          src={process.env.PUBLIC_URL + `/images/gallery/Cyprus%20Vol%202/image-8.jpg`}/>
@@ -92,10 +91,10 @@ const Gallery = () => {
                                     <div className='gallery-inner-showcase-item-info'>
                                         <p className='gallery-inner-showcase-item-info-date'>14.05.2024</p>
                                         <h3 className='gallery-inner-showcase-item-info-title'>Butterfly</h3>
-                                        <NavLink to={`/gallery?photos=${encodeURIComponent('Butterfly')}`}
+                                        <ScrollToTopNavLink to={`/gallery?photos=${encodeURIComponent('Butterfly')}`}
                                                  className='gallery-inner-showcase-item-info-button'>Open
                                             Gallery
-                                        </NavLink>
+                                        </ScrollToTopNavLink>
                                     </div>
                                     <img className='gallery-inner-showcase-item-background'
                                          src={process.env.PUBLIC_URL + `/images/gallery/Butterfly/image-5.jpg`}/>
@@ -104,10 +103,10 @@ const Gallery = () => {
                                     <div className='gallery-inner-showcase-item-info'>
                                         <p className='gallery-inner-showcase-item-info-date'>14.05.2024</p>
                                         <h3 className='gallery-inner-showcase-item-info-title'>Animals</h3>
-                                        <NavLink to={`/gallery?photos=${encodeURIComponent('Animals')}`}
+                                        <ScrollToTopNavLink to={`/gallery?photos=${encodeURIComponent('Animals')}`}
                                                  className='gallery-inner-showcase-item-info-button'>Open
                                             Gallery
-                                        </NavLink>
+                                        </ScrollToTopNavLink>
                                     </div>
                                     <img className='gallery-inner-showcase-item-background'
                                          src={process.env.PUBLIC_URL + `/images/gallery/Animals/image-7.jpg`}/>
@@ -116,10 +115,10 @@ const Gallery = () => {
                                     <div className='gallery-inner-showcase-item-info'>
                                         <p className='gallery-inner-showcase-item-info-date'>14.05.2024</p>
                                         <h3 className='gallery-inner-showcase-item-info-title'>Summer Portraits</h3>
-                                        <NavLink to={`/gallery?photos=${encodeURIComponent('Summer Portraits')}`}
+                                        <ScrollToTopNavLink to={`/gallery?photos=${encodeURIComponent('Summer Portraits')}`}
                                                  className='gallery-inner-showcase-item-info-button'>Open
                                             Gallery
-                                        </NavLink>
+                                        </ScrollToTopNavLink>
                                     </div>
                                     <img className='gallery-inner-showcase-item-background'
                                          src={process.env.PUBLIC_URL + `/images/gallery/Summer%20Portraits/image-3.jpg`}/>
@@ -128,10 +127,10 @@ const Gallery = () => {
                                     <div className='gallery-inner-showcase-item-info'>
                                         <p className='gallery-inner-showcase-item-info-date'>14.05.2024</p>
                                         <h3 className='gallery-inner-showcase-item-info-title'>Winter</h3>
-                                        <NavLink to={`/gallery?photos=${encodeURIComponent('Winter')}`}
+                                        <ScrollToTopNavLink to={`/gallery?photos=${encodeURIComponent('Winter')}`}
                                                  className='gallery-inner-showcase-item-info-button'>Open
                                             Gallery
-                                        </NavLink>
+                                        </ScrollToTopNavLink>
                                     </div>
                                     <img className='gallery-inner-showcase-item-background'
                                          src={process.env.PUBLIC_URL + `/images/gallery/Winter/image-5.jpg`}/>
@@ -140,10 +139,10 @@ const Gallery = () => {
                                     <div className='gallery-inner-showcase-item-info'>
                                         <p className='gallery-inner-showcase-item-info-date'>14.05.2024</p>
                                         <h3 className='gallery-inner-showcase-item-info-title'>Spring Portraits</h3>
-                                        <NavLink to={`/gallery?photos=${encodeURIComponent('Spring Portraits')}`}
+                                        <ScrollToTopNavLink to={`/gallery?photos=${encodeURIComponent('Spring Portraits')}`}
                                                  className='gallery-inner-showcase-item-info-button'>Open
                                             Gallery
-                                        </NavLink>
+                                        </ScrollToTopNavLink>
                                     </div>
                                     <img className='gallery-inner-showcase-item-background'
                                          src={process.env.PUBLIC_URL + `/images/gallery/Spring%20Portraits/image-1.jpg`}/>

@@ -3,6 +3,7 @@
   position: relative;
 }
 .gallery-header {
+  width: calc(100vw - calc($view-width-padding / 2));
   &-banner-2 {
     margin: 35em 0 0 0;
     width: 100%;
@@ -22,7 +23,6 @@
       }
     }
     &-wrapper {
-      width: calc(100vw - 20em);
       position: relative;
       border-radius: 5rem;
       overflow: hidden;
@@ -109,6 +109,7 @@
       }
     }
     &-showcase {
+      margin: 0 0 10em 0;
       width: 100vw;
       position: relative;
 
@@ -216,7 +217,7 @@
       place-items: center;
 
       img {
-        max-width: 80%; max-height: 80vh;
+        width: 80%;
         border-radius: 4em;
         &:nth-child(1) {
           transform: scale(1.01, 1.01) translateX(0);

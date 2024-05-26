@@ -33,7 +33,7 @@ function Gallery() {
                         <h3>{galleryPhotosTitle}</h3>
                     </div>
                     <div className="gallery-header-banner-2">
-                        <div className="gallery-header-banner-2-wrapper">
+                        <div className="gallery-header-banner-2-wrapper view-width">
                             <img className="gallery-header-banner-2-image-cutout" alt=''
                                  src={process.env.PUBLIC_URL + `/images/gallery/${galleryPhotos}/header/cutout.png`}/>
                             <img className="gallery-header-banner-2-image" alt=''
