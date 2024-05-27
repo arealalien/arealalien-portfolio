@@ -41,7 +41,7 @@ const About = () => {
 
     return (
         <>
-            <section className='about'>
+            <section className='about' data-scroll-section>
                 <div className='about-inner component-grid view-width'>
                     <div className='component-grid-left cgl-space-bet'>
                         <div className='about-inner-left'>

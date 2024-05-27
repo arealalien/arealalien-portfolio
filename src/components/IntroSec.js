@@ -103,7 +103,7 @@ const IntroSec = () => {
     }, []);
 
     return (
-        <section className='intro'>
+        <section className='intro' data-scroll-section>
             <div className='intro-inner component-grid view-width'>
                 <div className="intro-inner-foreground">
                     <div className='component-grid-top'>

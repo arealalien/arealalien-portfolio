@@ -65,7 +65,7 @@ const TimelineSec = () => {
     };
 
     return (
-        <section className='timeline' ref={timelineRef}>
+        <section className='timeline' ref={timelineRef} data-scroll-section>
             <div className='timeline-inner component-grid view-width'>
                 <div className='component-grid-left cgl-left-col'>
                     <h2 className='component-grid-title'>/Timeline</h2>

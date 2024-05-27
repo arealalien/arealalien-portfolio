@@ -42,7 +42,7 @@ const Gallery = () => {
 
     return (
         <>
-            <section className='gallery'>
+            <section className='gallery' data-scroll-section>
                 <div className='gallery-inner component-grid'>
                     <div className='component-grid-left view-width'>
                         <div className='gallery-inner-left'>

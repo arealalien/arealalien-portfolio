@@ -3,7 +3,7 @@ import React from "react";
 const Contact = () => {
     return (
         <>
-            <section className='contact'>
+            <section className='contact' data-scroll-section>
                 <div className='contact-inner component-grid view-width'>
                     <div className='component-grid-top'>
                         <h2 className='component-grid-title cgt'>/Let's talk/</h2>

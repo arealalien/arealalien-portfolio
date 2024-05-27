@@ -39,7 +39,7 @@ const Projects = () => {
 
     return (
         <>
-            <section className='projects' ref={projectsRef}>
+            <section className='projects' ref={projectsRef} data-scroll-section>
                 <div className='projects-inner component-grid view-width'>
                     <div className='component-grid-left cgl-left-col'>
                         <h2 className='component-grid-title'>/Projects</h2>

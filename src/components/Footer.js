@@ -39,7 +39,7 @@ const Footer = () => {
     }, []);
 
     return (
-        <footer className='footer'>
+        <footer className='footer' data-scroll-section>
             <div className='footer-top'>
                 <div className='footer-top-inner'>
                     <ul className='footer-top-list'>

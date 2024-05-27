@@ -2,7 +2,7 @@ import React from "react";
 
 const BlogSec = () => {
     return (
-        <section className='blog'>
+        <section className='blog' data-scroll-section>
             <div className='blog-inner component-grid view-width'>
                 <div className='component-grid-left'>
                     <h2 className='component-grid-title'>/Blog</h2>
