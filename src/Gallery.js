@@ -1,7 +1,8 @@
 import React from 'react';
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { useLocation } from "react-router-dom";
 import './css/main.css';
+import useLocoScrollG from "./components/useLocoScrollG";
 
 // Components
 import Navbar from "./components/Navbar";
@@ -11,6 +12,10 @@ import Footer from "./components/Footer";
 import Banner from "./components/Banner";
 
 function Gallery() {
+    const [loading] = useState(true);
+
+    useLocoScrollG(!loading);
+
     useEffect(() => {
         window.scrollTo(0, 0)
     }, []);
@@ -25,10 +30,11 @@ function Gallery() {
 
         return (
             <>
+            <div id="gallery-container" data-scroll-container>
                 <div className='grain'
                      style={{backgroundImage: `url(${process.env.PUBLIC_URL}/images/grain/noise.gif)`}}></div>
                 <Navbar/>
-                <header className="gallery-header gbanner-2-s">
+                <header className="gallery-header gbanner-2-s" data-scroll-section>
                     <div className="gallery-header-banner-2-title">
                         <h3>{galleryPhotosTitle}</h3>
                     </div>
@@ -41,18 +47,20 @@ function Gallery() {
                         </div>
                     </div>
                 </header>
-                <GalleryItem photos={galleryPhotos}></GalleryItem>
-                <GallerySec/>
-                <Footer/>
+                <GalleryItem photos={galleryPhotos} data-scroll-section></GalleryItem>
+                <GallerySec data-scroll-section/>
+                <Footer data-scroll-section/>
+            </div>
             </>
         );
     } else {
         return (
             <>
+                <div id="gallery-container" data-scroll-container>
                 <div className='grain'
                      style={{backgroundImage: `url(${process.env.PUBLIC_URL}/images/grain/noise.gif)`}}></div>
                 <Navbar/>
-                <header className="gallery-header">
+                <header className="gallery-header" data-scroll-section>
                     <div className="gallery-header-banner">
                         <Banner bannerwords="Gallery , Gallery , Gallery , "/>
                         <div className="gallery-header-banner-wrapper">
@@ -63,8 +71,9 @@ function Gallery() {
                         </div>
                     </div>
                 </header>
-                <GallerySec/>
-                <Footer/>
+                <GallerySec data-scroll-section/>
+                <Footer data-scroll-section/>
+                </div>
             </>
         );
     }

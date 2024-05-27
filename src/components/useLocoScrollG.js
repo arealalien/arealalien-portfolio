@@ -2,11 +2,11 @@ import { useEffect } from 'react';
 import LocomotiveScroll from 'locomotive-scroll';
 import 'locomotive-scroll/dist/locomotive-scroll.css';
 
-const useLocoScroll = (start) => {
+const useLocoScrollG = (start) => {
     useEffect(() => {
         if (!start) return;
 
-        const scrollEl = document.querySelector('#main-container');
+        const scrollEl = document.querySelector('#gallery-container');
         const locoScroll = new LocomotiveScroll({
             el: scrollEl,
             smooth: true,
@@ -21,4 +21,4 @@ const useLocoScroll = (start) => {
     }, [start]);
 };
 
-export default useLocoScroll;
+export default useLocoScrollG;

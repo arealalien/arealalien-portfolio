@@ -67,9 +67,9 @@ const TimelineSec = () => {
     return (
         <section className='timeline' ref={timelineRef} data-scroll-section>
             <div className='timeline-inner component-grid view-width'>
-                <div className='component-grid-left cgl-left-col'>
+                <div id="timeline" className='component-grid-left cgl-left-col'>
                     <h2 className='component-grid-title'>/Timeline</h2>
-                    <div className='component-grid-ball'
+                    <div data-scroll data-scroll-sticky data-scroll-offset="-350, 640" data-scroll-target="#timeline" className='component-grid-ball'
                          style={{transform: `rotate(${rotateAngle}deg)`}}>
                         <svg className='circle-svg' width="200" height="200" viewBox="0 0 100 100" version="1.1"
                              xmlns="http://www.w3.org/2000/svg" style={{transform: 'rotate(-90deg)'}}>
