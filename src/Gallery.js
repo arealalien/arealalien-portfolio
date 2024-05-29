@@ -3,6 +3,7 @@ import { useEffect, useState } from "react";
 import { useLocation } from "react-router-dom";
 import './css/main.css';
 import LocomotiveScroll from "locomotive-scroll";
+import 'locomotive-scroll/dist/locomotive-scroll.css';
 
 // Components
 import Navbar from "./components/Navbar";

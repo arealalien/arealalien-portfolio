@@ -1,6 +1,7 @@
 import React, {useEffect, useState} from 'react';
 import './css/main.css';
 import LocomotiveScroll from "locomotive-scroll";
+import 'locomotive-scroll/dist/locomotive-scroll.css';
 
 // Components
 import Navbar from "./components/Navbar";

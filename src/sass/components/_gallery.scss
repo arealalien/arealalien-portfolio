@@ -3,7 +3,8 @@
   position: relative;
 }
 .gallery-header {
-  width: calc(100vw - calc($view-width-padding / 2));
+  /*width: calc(100vw - calc($view-width-padding / 2));*/
+  width: 100vw;
   &-banner-2 {
     margin: 35em 0 0 0;
     width: 100%;
@@ -72,7 +73,8 @@
   }
 }
 .gallery {
-  width: calc(100vw - calc($view-width-padding / 2));
+  /*width: calc(100vw - calc($view-width-padding / 2));*/
+  width: 100vw;
   min-height: 50em;
   border-top: 1px solid hslac($white, .1);
   /* border-bottom: 1px solid hslac($white, .1); */
@@ -176,7 +178,8 @@
 }
 .gallery-item {
   padding: 10em 0;
-  width: calc(100vw - calc($view-width-padding / 2));
+  /*width: calc(100vw - calc($view-width-padding / 2));*/
+  width: 100vw;
   @include flex-center();
 
   &-inner {

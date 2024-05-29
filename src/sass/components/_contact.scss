@@ -6,7 +6,8 @@
 }
 .contact {
   padding: 20em 0;
-  width: calc(100vw - calc($view-width-padding / 2));
+  /*width: calc(100vw - calc($view-width-padding / 2));*/
+  width: 100vw;
   min-height: 50em;
   border-top: 1px solid hslac($white, .1);
   @include flex-col();

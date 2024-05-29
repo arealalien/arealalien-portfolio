@@ -5,7 +5,8 @@
   @include flex-col-left();
 
   &-top {
-    width: calc(100vw - calc($view-width-padding / 2));
+    /*width: calc(100vw - calc($view-width-padding / 2));*/
+    width: 100vw;
     @include flex-center();
 
     &-inner {
@@ -86,7 +87,8 @@
     }
   }
   &-bottom {
-    width: calc(100vw - calc($view-width-padding / 2));
+    /*width: calc(100vw - calc($view-width-padding / 2));*/
+    width: 100vw;
     @include flex-center();
     &-inner {
       padding: 4em 0;
