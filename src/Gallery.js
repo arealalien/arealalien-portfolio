@@ -2,7 +2,7 @@ import React from 'react';
 import { useEffect, useState } from "react";
 import { useLocation } from "react-router-dom";
 import './css/main.css';
-import useLocoScrollG from "./components/useLocoScrollG";
+import LocomotiveScroll from "locomotive-scroll";
 
 // Components
 import Navbar from "./components/Navbar";
@@ -14,7 +14,24 @@ import Banner from "./components/Banner";
 function Gallery() {
     const [loading] = useState(true);
 
-    useLocoScrollG(!loading);
+    useEffect(() => {
+        if (!loading) return;
+
+        setTimeout(() => {
+            const scrollEl = document.querySelector('#gallery-container');
+            const locoScroll = new LocomotiveScroll({
+                el: scrollEl,
+                smooth: true,
+                lerp: 0.05,
+                multiplier: 1.2,
+                class: 'is-reveal'
+            });
+
+            return () => {
+                if (locoScroll) locoScroll.destroy();
+            };
+        }, 100);
+    }, [loading]);
 
     useEffect(() => {
         window.scrollTo(0, 0)
@@ -35,11 +52,11 @@ function Gallery() {
                      style={{backgroundImage: `url(${process.env.PUBLIC_URL}/images/grain/noise.gif)`}}></div>
                 <Navbar/>
                 <header className="gallery-header gbanner-2-s" data-scroll-section>
-                    <div className="gallery-header-banner-2-title">
+                    <div className="gallery-header-banner-2-title" data-scroll data-scroll-sticky data-scroll-offset="-430, 230" data-scroll-target="#gallery-header">
                         <h3>{galleryPhotosTitle}</h3>
                     </div>
                     <div className="gallery-header-banner-2">
-                        <div className="gallery-header-banner-2-wrapper view-width">
+                        <div id="gallery-header" className="gallery-header-banner-2-wrapper view-width" data-scroll>
                             <img className="gallery-header-banner-2-image-cutout" alt=''
                                  src={process.env.PUBLIC_URL + `/images/gallery/${galleryPhotos}/header/cutout.png`}/>
                             <img className="gallery-header-banner-2-image" alt=''

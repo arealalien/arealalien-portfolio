@@ -1,7 +1,7 @@
 import React from 'react';
 import { useEffect, useState } from "react";
 import './css/main.css';
-import useLocoScrollG from "./components/useLocoScrollG";
+import LocomotiveScroll from "locomotive-scroll";
 
 // Components
 import Navbar from "./components/Navbar";
@@ -13,7 +13,22 @@ import Banner from "./components/Banner";
 function Projects() {
     const [loading] = useState(true);
 
-    useLocoScrollG(!loading);
+    useEffect(() => {
+        if (!loading) return;
+
+        const scrollEl = document.querySelector('#gallery-container');
+        const locoScroll = new LocomotiveScroll({
+            el: scrollEl,
+            smooth: true,
+            lerp: 0.05, // Adjust this value to control the "smoothness" and "damping"
+            multiplier: 1.2, // Adjust this value to control the scrolling speed
+            class: 'is-reveal'
+        });
+
+        return () => {
+            if (locoScroll) locoScroll.destroy();
+        };
+    }, [loading]);
 
     useEffect(() => {
         window.scrollTo(0, 0)

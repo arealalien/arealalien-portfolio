@@ -1,5 +1,6 @@
 import React, {useEffect, useRef, useState} from 'react';
 import './css/main.css';
+import LocomotiveScroll from "locomotive-scroll";
 
 // Components
 import Navbar from "./components/Navbar";
@@ -10,6 +11,25 @@ function Project({ project }) {
     const [scrollProgress, setScrollProgress] = useState(0);
     const [rotateAngle, setRotateAngle] = useState(0);
     const projectRef = useRef(null);
+
+    const [loading] = useState(true);
+
+    useEffect(() => {
+        if (!loading) return;
+
+        const scrollEl = document.querySelector('#gallery-container');
+        const locoScroll = new LocomotiveScroll({
+            el: scrollEl,
+            smooth: true,
+            lerp: 0.05, // Adjust this value to control the "smoothness" and "damping"
+            multiplier: 1.2, // Adjust this value to control the scrolling speed
+            class: 'is-reveal'
+        });
+
+        return () => {
+            if (locoScroll) locoScroll.destroy();
+        };
+    }, [loading]);
 
     let projectName = project;
 
@@ -62,10 +82,11 @@ function Project({ project }) {
 
     return (
         <>
+            <div id="gallery-container" data-scroll-container>
             <div className='grain'
                  style={{backgroundImage: `url(${process.env.PUBLIC_URL}/images/grain/noise.gif)`}}></div>
             <Navbar pagename={project}/>
-            <header className="project-header">
+            <header className="project-header" data-scroll-section>
                 <div className="project-header-banner">
                     <Banner bannerwords={`${projectName} , ${projectName} , ${projectName} , `}/>
                 </div>
@@ -76,11 +97,11 @@ function Project({ project }) {
                     </div>
                 </div>
             </header>
-            <section className='project' ref={projectRef}>
+            <section className='project' ref={projectRef} data-scroll-section>
                 <div className='project-inner component-grid view-width'>
-                    <div className='component-grid-left cgl-left-col'>
+                    <div id="project" className='component-grid-left cgl-left-col'>
                         <h2 className='component-grid-title'>/Overview</h2>
-                        <div className='component-grid-ball'
+                        <div data-scroll data-scroll-sticky data-scroll-offset="-350, 640" data-scroll-target="#project" className='component-grid-ball'
                              style={{transform: `rotate(${rotateAngle}deg)`}}>
                             <svg className='circle-svg' width="200" height="200" viewBox="0 0 100 100" version="1.1"
                                  xmlns="http://www.w3.org/2000/svg" style={{transform: 'rotate(-90deg)'}}>
@@ -100,7 +121,8 @@ function Project({ project }) {
                     </div>
                 </div>
             </section>
-            <Footer/>
+            <Footer data-scroll-section/>
+            </div>
         </>
     );
 }

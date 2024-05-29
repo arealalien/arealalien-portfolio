@@ -1,5 +1,4 @@
 import React, { useState, useEffect, useRef } from "react";
-import "keen-slider/keen-slider.min.css";
 
 const Gallery = ({ photos }) => {
     const [activeIndex, setActiveIndex] = useState(null);
@@ -47,9 +46,9 @@ const Gallery = ({ photos }) => {
 
     return (
         <>
-            <section className='gallery-item'>
+            <section className='gallery-item' data-scroll-section>
                 <div className='gallery-item-inner component-grid view-width'>
-                    <div className='component-grid-left'>
+                    <div id="gallery-item" className='component-grid-left'>
                         {[...Array(10).keys()].map(i => (
                             <img
                                 key={i}
@@ -61,7 +60,7 @@ const Gallery = ({ photos }) => {
                             />
                         ))}
                     </div>
-                    <div className='component-grid-right'>
+                    <div className='component-grid-right' data-scroll data-scroll-sticky data-scroll-offset="-150, 150" data-scroll-target="#gallery-item">
                         {[...Array(10).keys()].map(i => (
                             <img
                                 key={i}
