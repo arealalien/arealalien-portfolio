@@ -10,8 +10,8 @@ const useLocoScroll = (start) => {
         const locoScroll = new LocomotiveScroll({
             el: scrollEl,
             smooth: true,
-            lerp: 0.05, // Adjust this value to control the "smoothness" and "damping"
-            multiplier: 1.2, // Adjust this value to control the scrolling speed
+            lerp: 0.05,
+            multiplier: 1.2,
             class: 'is-reveal'
         });
 
