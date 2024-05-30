@@ -18,20 +18,18 @@ function Gallery() {
     useEffect(() => {
         if (!loading) return;
 
-        setTimeout(() => {
-            const scrollEl = document.querySelector('#gallery-container');
-            const locoScroll = new LocomotiveScroll({
-                el: scrollEl,
-                smooth: true,
-                lerp: 0.05,
-                multiplier: 1.2,
-                class: 'is-reveal'
-            });
+        const scrollEl = document.querySelector('#gallery-container');
+        const locoScroll = new LocomotiveScroll({
+            el: scrollEl,
+            smooth: true,
+            lerp: 0.05,
+            multiplier: 1.2,
+            class: 'is-reveal'
+        });
 
-            return () => {
-                if (locoScroll) locoScroll.destroy();
-            };
-        }, 100);
+        return () => {
+            if (locoScroll) locoScroll.destroy();
+        };
     }, [loading]);
 
     useEffect(() => {
