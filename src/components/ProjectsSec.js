@@ -105,17 +105,17 @@ const Projects = () => {
                             </div>
                             <div className='projects-inner-grid-item pigil'>
                                 <div className='projects-inner-grid-item-info'>
-                                    <p className='projects-inner-grid-item-info-tag'>3D Model / School</p>
+                                    <p className='projects-inner-grid-item-info-tag'>3D Model</p>
                                     <div className='projects-inner-grid-item-info-bottom'>
-                                        <h3 className='projects-inner-grid-item-info-bottom-title'>Dreamroom</h3>
-                                        <NavLink to="projects/dreamroom"
+                                        <h3 className='projects-inner-grid-item-info-bottom-title'>Porsche</h3>
+                                        <NavLink to="projects/porsche"
                                                  className='projects-inner-grid-item-info-bottom-button'>Learn
                                             more</NavLink>
                                     </div>
                                 </div>
                                 <div className='projects-inner-grid-item-image'>
                                     <img alt=''
-                                         src={process.env.PUBLIC_URL + `/images/projects/dreamroom/dreamroom.jpg`}/>
+                                         src={process.env.PUBLIC_URL + `/images/projects/porsche/porsche.jpg`}/>
                                 </div>
                             </div>
 

@@ -21,7 +21,7 @@ function App() {
             <Route path="/projects/xcraft" element={<Project project="xcraft"/>}/>
             <Route path="/projects/yme" element={<Project project="yme"/>}/>
             <Route path="/projects/gg" element={<Project project="gg"/>}/>
-            <Route path="/projects/dreamroom" element={<Project project="dreamroom"/>}/>
+            <Route path="/projects/porsche" element={<Project project="porsche"/>}/>
         </Routes>
     );
 }

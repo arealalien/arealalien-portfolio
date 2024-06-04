@@ -40,8 +40,8 @@ function Project({ project }) {
         projectName = "YME Universe";
     } else if (project === "gg") {
         projectName = "Grøss og Gru";
-    } else if (project === "dreamroom") {
-        projectName = "Dreamroom";
+    } else if (project === "porsche") {
+        projectName = "Porsche";
     } else {
 
     }
